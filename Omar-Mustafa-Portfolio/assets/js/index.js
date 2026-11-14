@@ -111,64 +111,7 @@ portfolioFilterBtn.forEach(function (button) {
 
 //////////////////////////////////////////
 
-// carousel
-let nextTestimonial = document.getElementById("next-testimonial")
-let prevTestimonial = document.getElementById("prev-testimonial")
-let carouselIndicator = document.querySelectorAll(".carousel-indicator")
-let testimonialCard = document.querySelectorAll(".testimonial-card")
-let testimonialsCarousel = document.getElementById("testimonials-carousel")
-let currentIndex = 0
-const totalCards = testimonialCard.length;
-const visibleCards = 3;
-const maxIndex = totalCards - visibleCards;
-const movePercentage = 100 / visibleCards;
-
-prevTestimonial.addEventListener("click", function () {
-    currentIndex--;
-    if (currentIndex < 0) {
-        currentIndex = maxIndex;
-    }
-    testimonialsCarousel.style.transform =
-        `translateX(${currentIndex * movePercentage}%)`;
-    updateIndicators();
-})
-
-nextTestimonial.addEventListener("click", function () {
-    currentIndex++;
-    if (currentIndex > maxIndex) {
-        currentIndex = 0;
-    }
-    testimonialsCarousel.style.transform =
-        `translateX(${currentIndex * movePercentage}%)`;
-    updateIndicators();
-})
-
-
-function updateIndicators() {
-    carouselIndicator.forEach(function (indicator) {
-        indicator.classList.add("bg-slate-400");
-        indicator.classList.remove("bg-accent");
-        indicator.classList.add("dark:bg-slate-600");
-        indicator.setAttribute("aria-selected", "false");
-        indicator.classList.remove("scale-125");
-        if (Number(indicator.dataset.index) === currentIndex) {
-            indicator.classList.remove("bg-slate-400");
-            indicator.classList.add("bg-accent");
-            indicator.classList.add("scale-125");
-            indicator.classList.remove("dark:bg-slate-600");
-            indicator.setAttribute("aria-selected", "true");
-        }
-    });
-}
-
-carouselIndicator.forEach(function (indicator) {
-    indicator.addEventListener("click", function () {
-        currentIndex = Number(indicator.dataset.index);
-        testimonialsCarousel.style.transform =
-            `translateX(${currentIndex * movePercentage}%)`;
-        updateIndicators()
-    })
-})
+// Testimonial cards are displayed as a static, responsive grid.
 
 // settings sidebar
 let body = document.querySelector("body")
