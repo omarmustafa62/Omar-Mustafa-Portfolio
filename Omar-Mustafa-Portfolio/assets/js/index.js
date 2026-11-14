@@ -1,193 +1,299 @@
 // Mobile navigation
-let mobileMenuButton = document.getElementById("mobile-menu-button");
-let navigationMenu = document.getElementById("nav-links");
+const mobileMenuButton = document.getElementById("mobile-menu-button");
+const navigationMenu = document.getElementById("nav-links");
 
-function closeMobileMenu() {
-    navigationMenu.classList.remove("active");
-    mobileMenuButton.setAttribute("aria-expanded", "false");
-    mobileMenuButton.setAttribute("aria-label", "فتح قائمة التنقل");
-    mobileMenuButton.innerHTML = '<i class="fa-solid fa-bars text-xl" aria-hidden="true"></i>';
+if (mobileMenuButton && navigationMenu) {
+    function closeMobileMenu() {
+        navigationMenu.classList.remove("active");
+        mobileMenuButton.setAttribute("aria-expanded", "false");
+        mobileMenuButton.setAttribute("aria-label", "Open navigation menu");
+        mobileMenuButton.innerHTML = '<i class="fa-solid fa-bars text-xl" aria-hidden="true"></i>';
+    }
+
+    mobileMenuButton.addEventListener("click", function () {
+        const isOpen = navigationMenu.classList.toggle("active");
+        mobileMenuButton.setAttribute("aria-expanded", String(isOpen));
+        mobileMenuButton.setAttribute("aria-label", isOpen ? "Close navigation menu" : "Open navigation menu");
+        mobileMenuButton.innerHTML = isOpen
+            ? '<i class="fa-solid fa-xmark text-xl" aria-hidden="true"></i>'
+            : '<i class="fa-solid fa-bars text-xl" aria-hidden="true"></i>';
+    });
+
+    navigationMenu.querySelectorAll("a").forEach(function (link) {
+        link.addEventListener("click", closeMobileMenu);
+    });
+
+    document.addEventListener("keydown", function (event) {
+        if (event.key === "Escape") closeMobileMenu();
+    });
+
+    window.addEventListener("resize", function () {
+        if (window.innerWidth > 1024) closeMobileMenu();
+    });
 }
-
-mobileMenuButton.addEventListener("click", function () {
-    let isOpen = navigationMenu.classList.toggle("active");
-    mobileMenuButton.setAttribute("aria-expanded", String(isOpen));
-    mobileMenuButton.setAttribute("aria-label", isOpen ? "إغلاق قائمة التنقل" : "فتح قائمة التنقل");
-    mobileMenuButton.innerHTML = isOpen
-        ? '<i class="fa-solid fa-xmark text-xl" aria-hidden="true"></i>'
-        : '<i class="fa-solid fa-bars text-xl" aria-hidden="true"></i>';
-});
-
-navigationMenu.querySelectorAll("a").forEach(function (link) {
-    link.addEventListener("click", closeMobileMenu);
-});
-
-document.addEventListener("keydown", function (event) {
-    if (event.key === "Escape") closeMobileMenu();
-});
-
-window.addEventListener("resize", function () {
-    if (window.innerWidth > 1024) closeMobileMenu();
-});
 
 //////////////////////////////////////////
 
-//  active links
-let heroSection = document.getElementById("hero-section")
-let about = document.getElementById("about")
-let portfolio = document.getElementById("portfolio")
-let experience = document.getElementById("experience")
-let testimonials = document.getElementById("testimonials")
-let contact = document.getElementById("contact")
-let navLinks = document.querySelectorAll(".nav-links a")
-
-// console.log(heroSection.offsetTop)
-// console.log(heroSection.offsetHeight)
-// console.log(about.offsetTop)
-// console.log(about.offsetHeight)
-// console.log(portfolio.offsetTop)
-// console.log(portfolio.offsetHeight)
-// console.log(experience.offsetTop)
-// console.log(experience.offsetHeight)
-// console.log(experience.offsetTop)
-// console.log(experience.offsetHeight)
-
-window.addEventListener("scroll", function () {
-    navLinks.forEach(function (link) {
-        link.classList.remove("active")
+// Active navigation links
+const navLinks = Array.from(document.querySelectorAll(".nav-links a"));
+const navSections = navLinks
+    .map(function (link) {
+        return document.querySelector(link.getAttribute("href"));
     })
-    if (window.scrollY >= heroSection.offsetTop && window.scrollY < about.offsetTop) {
-        navLinks[0].classList.add("active")
-    } else if (window.scrollY >= about.offsetTop && window.scrollY < portfolio.offsetTop) {
-        navLinks[1].classList.add("active")
-    } else if (window.scrollY >= portfolio.offsetTop && window.scrollY < experience.offsetTop) {
-        navLinks[2].classList.add("active")
-    } else if (window.scrollY >= experience.offsetTop && window.scrollY < testimonials.offsetTop) {
-        navLinks[3].classList.add("active")
-    } else if (window.scrollY >= testimonials.offsetTop && window.scrollY < contact.offsetTop) {
-        navLinks[4].classList.add("active")
-    } else {
-        navLinks[5].classList.add("active")
-    }
-})
+    .filter(Boolean);
+
+function updateActiveNavLink() {
+    const activePosition = window.scrollY + 120;
+    let activeSection = navSections[0];
+
+    navSections.forEach(function (section) {
+        if (section.offsetTop <= activePosition) activeSection = section;
+    });
+
+    navLinks.forEach(function (link) {
+        const isActive = link.getAttribute("href") === `#${activeSection.id}`;
+        link.classList.toggle("active", isActive);
+        if (isActive) {
+            link.setAttribute("aria-current", "location");
+        } else {
+            link.removeAttribute("aria-current");
+        }
+    });
+}
+
+window.addEventListener("scroll", updateActiveNavLink, { passive: true });
+window.addEventListener("load", updateActiveNavLink);
+updateActiveNavLink();
 
 //////////////////////////////////////////
 
 // Theme button
-let html = document.documentElement;
-let themeBtn = document.getElementById("theme-toggle-button");
-let savedTheme = localStorage.getItem("theme");
+const html = document.documentElement;
+const themeBtn = document.getElementById("theme-toggle-button");
+const savedTheme = localStorage.getItem("theme");
 
-if (savedTheme === "dark") {
-    html.classList.add("dark");
-} else {
-    html.classList.remove("dark");
+if (savedTheme === "dark" || savedTheme === "light") {
+    html.classList.toggle("dark", savedTheme === "dark");
 }
-themeBtn.setAttribute("aria-pressed", String(html.classList.contains("dark")));
+
+function updateThemeButton() {
+    themeBtn.setAttribute("aria-pressed", String(html.classList.contains("dark")));
+}
+
+updateThemeButton();
 themeBtn.addEventListener("click", function () {
     html.classList.toggle("dark");
-    let isDark = html.classList.contains("dark");
-    themeBtn.setAttribute("aria-pressed", String(isDark));
+    const isDark = html.classList.contains("dark");
     localStorage.setItem("theme", isDark ? "dark" : "light");
+    updateThemeButton();
 });
 //////////////////////////////////////////
 
-// Nav And Taps
-let portfolioFilters = document.getElementById("portfolio-filters")
-let portfolioFilterBtn = document.querySelectorAll(".portfolio-filter")
-let portfolioItem = document.querySelectorAll(".portfolio-item")
-let portfolioGrid = document.getElementById("portfolio-grid")
+// Portfolio filters
+const portfolioFilterButtons = document.querySelectorAll(".portfolio-filter");
+const portfolioItems = document.querySelectorAll(".portfolio-item");
+const activeFilterClasses = [
+    "active",
+    "bg-linear-to-r",
+    "from-primary",
+    "to-secondary",
+    "text-white",
+    "hover:shadow-lg",
+    "hover:shadow-primary/50"
+];
+const inactiveFilterClasses = [
+    "bg-white",
+    "dark:bg-slate-800",
+    "text-slate-600",
+    "dark:text-slate-300",
+    "hover:bg-slate-100",
+    "dark:hover:bg-slate-700",
+    "border",
+    "border-slate-300",
+    "dark:border-slate-700"
+];
 
-portfolioFilterBtn.forEach(function (button) {
+function setActivePortfolioFilter(activeButton) {
+    portfolioFilterButtons.forEach(function (button) {
+        const isActive = button === activeButton;
+        button.classList.remove(...activeFilterClasses, ...inactiveFilterClasses);
+        button.classList.add(...(isActive ? activeFilterClasses : inactiveFilterClasses));
+        button.setAttribute("aria-pressed", String(isActive));
+    });
+}
+
+portfolioFilterButtons.forEach(function (button) {
     button.addEventListener("click", function () {
-        portfolioFilterBtn.forEach(function (btnActive) {
-            btnActive.classList.remove("active")
-            btnActive.setAttribute("aria-pressed", "false");
-            btnActive.classList.remove("rounded-xl", "bg-linear-to-r", "from-primary", "to-secondary", "text-white", "font-bold", "transition-all", "duration-300", "hover:shadow-lg", "hover:shadow-primary/50")
-            btnActive.classList.add("rounded-xl", "bg-white", "dark:bg-slate-800", "text-slate-600", "dark:text-slate-300", "font-bold", "transition-all", "duration-300", "hover:bg-slate-100", "dark:hover:bg-slate-700", "border", "border-slate-300", "dark:border-slate-700")
-        });
-        button.setAttribute("aria-pressed", "true");
-        button.classList.remove(
-            "bg-white",
-            "dark:bg-slate-800",
-            "text-slate-600",
-            "dark:text-slate-300",
-            "hover:bg-slate-100",
-            "dark:hover:bg-slate-700",
-            "border",
-            "border-slate-300",
-            "dark:border-slate-700"
-        );
-        button.classList.add(
-            "bg-linear-to-r",
-            "from-primary",
-            "to-secondary",
-            "text-white",
-            "hover:shadow-lg",
-            "hover:shadow-primary/50",
-        );
-        portfolioItem.forEach(function (card) {
-            card.style.opacity = "0";
-            card.style.transform = "scale(0.8)";
-            if (button.dataset.filter == "all" || button.dataset.filter == card.dataset.category) {
-                card.classList.remove("hidden")
-                setTimeout(function () {
-                    card.style.opacity = "1";
-                    card.style.transform = "scale(1)";
-                }, 300);
+        setActivePortfolioFilter(button);
+
+        portfolioItems.forEach(function (item) {
+            const isVisible =
+                button.dataset.filter === "all" ||
+                button.dataset.filter === item.dataset.category;
+
+            if (isVisible) {
+                item.classList.remove("hidden");
+                item.style.opacity = "0";
+                item.style.transform = "scale(0.95)";
+                requestAnimationFrame(function () {
+                    item.style.opacity = "1";
+                    item.style.transform = "scale(1)";
+                });
             } else {
-                card.classList.add("hidden")
+                item.style.opacity = "0";
+                item.style.transform = "scale(0.95)";
+                item.classList.add("hidden");
             }
-        })
-    })
+        });
+    });
 });
 
 //////////////////////////////////////////
 
-// Testimonial cards are displayed as a static, responsive grid.
+// Testimonials carousel
+const testimonialsCarousel = document.getElementById("testimonials-carousel");
+const testimonialCards = testimonialsCarousel
+    ? Array.from(testimonialsCarousel.querySelectorAll(".testimonial-card"))
+    : [];
+const testimonialIndicatorGroup = document.querySelector('[aria-label="Project indicators"]');
+const nextTestimonialButton = document.getElementById("next-testimonial");
+const previousTestimonialButton = document.getElementById("prev-testimonial");
+let testimonialIndex = 0;
+let visibleTestimonialCount = 1;
+let testimonialIndicators = [];
+
+function getVisibleTestimonialCount() {
+    if (window.innerWidth >= 1024) return 3;
+    if (window.innerWidth >= 640) return 2;
+    return 1;
+}
+
+function renderTestimonialIndicators() {
+    if (!testimonialIndicatorGroup || !testimonialCards.length) return;
+
+    const indicatorCount = Math.max(
+        1,
+        testimonialCards.length - visibleTestimonialCount + 1
+    );
+    testimonialIndicatorGroup.replaceChildren();
+
+    for (let index = 0; index < indicatorCount; index += 1) {
+        const indicator = document.createElement("button");
+        indicator.type = "button";
+        indicator.className = "carousel-indicator w-3 h-3 rounded-full transition-all duration-300 hover:scale-125 cursor-pointer";
+        indicator.dataset.index = String(index);
+        indicator.setAttribute("role", "tab");
+        indicator.setAttribute("aria-label", `Project ${index + 1}`);
+        indicator.addEventListener("click", function () {
+            testimonialIndex = index;
+            updateTestimonialsCarousel();
+        });
+        testimonialIndicatorGroup.appendChild(indicator);
+    }
+
+    testimonialIndicators = Array.from(
+        testimonialIndicatorGroup.querySelectorAll(".carousel-indicator")
+    );
+}
+
+function updateTestimonialsCarousel() {
+    if (!testimonialsCarousel || !testimonialCards.length) return;
+
+    const lastIndex = Math.max(0, testimonialCards.length - visibleTestimonialCount);
+    testimonialIndex = Math.min(testimonialIndex, lastIndex);
+    testimonialsCarousel.style.transform =
+        `translateX(${testimonialIndex * (100 / visibleTestimonialCount)}%)`;
+
+    testimonialIndicators.forEach(function (indicator, index) {
+        const isActive = index === testimonialIndex;
+        indicator.classList.toggle("scale-125", isActive);
+        indicator.classList.toggle("bg-accent", isActive);
+        indicator.classList.toggle("bg-slate-400", !isActive);
+        indicator.classList.toggle("dark:bg-slate-600", !isActive);
+        indicator.setAttribute("aria-selected", String(isActive));
+        indicator.setAttribute("tabindex", isActive ? "0" : "-1");
+    });
+}
+
+function refreshTestimonialsCarousel() {
+    visibleTestimonialCount = getVisibleTestimonialCount();
+    renderTestimonialIndicators();
+    updateTestimonialsCarousel();
+}
+
+if (testimonialsCarousel && testimonialCards.length) {
+    if (nextTestimonialButton) {
+        nextTestimonialButton.addEventListener("click", function () {
+            const lastIndex = Math.max(0, testimonialCards.length - visibleTestimonialCount);
+            testimonialIndex = testimonialIndex >= lastIndex ? 0 : testimonialIndex + 1;
+            updateTestimonialsCarousel();
+        });
+    }
+
+    if (previousTestimonialButton) {
+        previousTestimonialButton.addEventListener("click", function () {
+            const lastIndex = Math.max(0, testimonialCards.length - visibleTestimonialCount);
+            testimonialIndex = testimonialIndex <= 0 ? lastIndex : testimonialIndex - 1;
+            updateTestimonialsCarousel();
+        });
+    }
+
+    window.addEventListener("resize", refreshTestimonialsCarousel);
+    refreshTestimonialsCarousel();
+}
 
 // settings sidebar
-let body = document.querySelector("body")
-let settingsToggle = document.getElementById("settings-toggle")
-let settingsSidebar = document.getElementById("settings-sidebar")
-let closeSettings = document.getElementById("close-settings")
+const body = document.querySelector("body");
+const settingsToggle = document.getElementById("settings-toggle");
+const settingsSidebar = document.getElementById("settings-sidebar");
+const closeSettings = document.getElementById("close-settings");
+
+function setSettingsOpen(isOpen) {
+    settingsSidebar.classList.toggle("translate-x-full", !isOpen);
+    settingsToggle.style.right = isOpen ? "20rem" : "0";
+    settingsToggle.setAttribute("aria-expanded", String(isOpen));
+    settingsSidebar.setAttribute("aria-hidden", String(!isOpen));
+
+    if (isOpen) {
+        closeSettings.focus();
+    } else {
+        settingsToggle.focus();
+    }
+}
 
 settingsToggle.addEventListener("click", function () {
-    settingsSidebar.classList.remove("translate-x-full")
-    settingsToggle.style.right = "20rem"
-})
+    const isOpen = settingsToggle.getAttribute("aria-expanded") !== "true";
+    setSettingsOpen(isOpen);
+});
 
 closeSettings.addEventListener("click", function () {
-    settingsSidebar.classList.add("translate-x-full")
-    settingsToggle.style.right = "0"
-})
+    setSettingsOpen(false);
+});
 
-let fontOption = document.querySelectorAll(".font-option");
+document.addEventListener("keydown", function (event) {
+    if (event.key === "Escape" && settingsToggle.getAttribute("aria-expanded") === "true") {
+        setSettingsOpen(false);
+    }
+});
+
+const fontOption = document.querySelectorAll(".font-option");
+const availableFonts = ["alexandria", "tajawal", "cairo"];
 
 function applyFont(fontName) {
+    if (!availableFonts.includes(fontName)) return;
 
-    body.classList.remove(
-        "font-alexandria",
-        "font-tajawal",
-        "font-cairo"
-    );
+    body.classList.remove("font-alexandria", "font-tajawal", "font-cairo");
     body.classList.add(`font-${fontName}`);
     fontOption.forEach(function (btn) {
+        const isActive = btn.dataset.font === fontName;
         btn.classList.remove(
             "active",
             "border-primary",
             "bg-slate-50",
             "dark:bg-slate-800"
         );
-        btn.classList.add(
-            "border-slate-200",
-            "dark:border-slate-700"
-        );
-        if (btn.dataset.font === fontName) {
-            btn.classList.remove(
-                "border-slate-200",
-                "dark:border-slate-700"
-            );
+        btn.setAttribute("aria-checked", String(isActive));
+        if (isActive) {
             btn.classList.add(
                 "active",
                 "border-primary",
@@ -196,9 +302,9 @@ function applyFont(fontName) {
             );
         }
     });
-
     localStorage.setItem("font", fontName);
 }
+
 fontOption.forEach(function (btn) {
     btn.addEventListener("click", function () {
         applyFont(btn.dataset.font);
@@ -206,54 +312,48 @@ fontOption.forEach(function (btn) {
 });
 
 let savedFont = localStorage.getItem("font");
-if (savedFont) {
-    applyFont(savedFont);
-} else {
-    applyFont("tajawal");
-}
+applyFont(availableFonts.includes(savedFont) ? savedFont : "alexandria");
 
 //////////////////////////////////////////
 
 // Theme Colors
-
-let themeColorsGrid = document.getElementById("theme-colors-grid");
-
-let themes = [
+const themeColorsGrid = document.getElementById("theme-colors-grid");
+const themes = [
     {
-        name: "Purple Blue",
-        primary: "#6366f1",
-        secondary: "#8b5cf6",
-        accent: "#ec4899"
+    name: "Coastal Teal & Citrus",
+    primary: "#0f766e",
+    secondary: "#f97316",
+    accent: "#eab308"
     },
     {
-        name: "Pink Orange",
-        primary: "#ec4899",
-        secondary: "#f97316",
-        accent: "#fb923c"
+    name: "Evergreen & Clay",
+    primary: "#166534",
+    secondary: "#c2410c",
+    accent: "#d97706"
     },
     {
-        name: "Green Emerald",
-        primary: "#10b981",
-        secondary: "#059669",
-        accent: "#34d399"
+    name: "Atlantic & Coral",
+    primary: "#0369a1",
+    secondary: "#f97316",
+    accent: "#2dd4bf"
     },
     {
-        name: "Blue Cyan",
-        primary: "#3b82f6",
-        secondary: "#06b6d4",
-        accent: "#22d3ee"
+    name: "Midnight & Lime",
+    primary: "#164e63",
+    secondary: "#a16207",
+    accent: "#84cc16"
     },
     {
-        name: "Red Rose",
-        primary: "#ef4444",
-        secondary: "#f43f5e",
-        accent: "#fb7185"
+    name: "Terracotta & Sea Glass",
+    primary: "#b45309",
+    secondary: "#0f766e",
+    accent: "#fb7185"
     },
     {
-        name: "Amber Orange",
-        primary: "#f59e0b",
-        secondary: "#ea580c",
-        accent: "#fbbf24"
+    name: "Graphite & Sun",
+    primary: "#334155",
+    secondary: "#ca8a04",
+    accent: "#f97316"
     }
 ];
 
@@ -270,8 +370,12 @@ function applyTheme(theme) {
         "--color-accent",
         theme.accent
     );
-    let themeButtons = themeColorsGrid.querySelectorAll("button");
+    const themeButtons = themeColorsGrid.querySelectorAll("button");
     themeButtons.forEach(function (btn) {
+        const isActive =
+            btn.dataset.primary === theme.primary &&
+            btn.dataset.secondary === theme.secondary &&
+            btn.dataset.accent === theme.accent;
         btn.classList.remove(
             "ring-2",
             "ring-primary",
@@ -279,10 +383,8 @@ function applyTheme(theme) {
             "ring-offset-white",
             "dark:ring-offset-slate-900"
         );
-        if (
-            btn.dataset.primary === theme.primary &&
-            btn.dataset.secondary === theme.secondary
-        ) {
+        btn.setAttribute("aria-pressed", String(isActive));
+        if (isActive) {
             btn.classList.add(
                 "ring-2",
                 "ring-primary",
@@ -292,49 +394,62 @@ function applyTheme(theme) {
             );
         }
     });
-    localStorage.setItem(
-        "themeColors",
-        JSON.stringify(theme)
-    );
+    localStorage.setItem("themeColors", JSON.stringify(theme));
 }
 
 themes.forEach(function (theme) {
-    let button = document.createElement("button");
+    const button = document.createElement("button");
     button.className =
         "w-12 h-12 rounded-full cursor-pointer transition-transform hover:scale-110 border-2 border-slate-200 dark:border-slate-700";
     button.style.background =
         `linear-gradient(135deg, ${theme.primary}, ${theme.secondary})`;
     button.dataset.primary = theme.primary;
     button.dataset.secondary = theme.secondary;
+    button.dataset.accent = theme.accent;
     button.title = theme.name;
+    button.setAttribute("aria-label", theme.name);
+    button.setAttribute("aria-pressed", "false");
+    button.type = "button";
     button.addEventListener("click", function () {
         applyTheme(theme);
     });
     themeColorsGrid.appendChild(button);
 });
 
-let savedThemeColors = localStorage.getItem("themeColors");
-if (savedThemeColors) {
-    let savedTheme = JSON.parse(savedThemeColors);
-    applyTheme(savedTheme);
-} else {
-    applyTheme(themes[0]);
+let savedThemeColors = themes[0];
+const storedThemeColors = localStorage.getItem("themeColors");
+if (storedThemeColors) {
+    try {
+        const parsedTheme = JSON.parse(storedThemeColors);
+        savedThemeColors =
+            themes.find(function (theme) {
+                return (
+                    theme.primary === parsedTheme.primary &&
+                    theme.secondary === parsedTheme.secondary &&
+                    theme.accent === parsedTheme.accent
+                );
+            }) || themes[0];
+    } catch (error) {
+        console.error("Could not restore saved theme colors.", error);
+        localStorage.removeItem("themeColors");
+    }
 }
+applyTheme(savedThemeColors);
 
 //////////////////////////////////////////
 // Reset Settings
 
-let resetSettings = document.getElementById("reset-settings");
+const resetSettings = document.getElementById("reset-settings");
 resetSettings.addEventListener("click", function () {
     localStorage.removeItem("font");
     localStorage.removeItem("themeColors");
-    applyFont("tajawal");
+    applyFont("alexandria");
     applyTheme(themes[0]);
 });
 
 // scroll to Top Button
 
-let scrollToTop = document.getElementById("scroll-to-top");
+const scrollToTop = document.getElementById("scroll-to-top");
 window.addEventListener("scroll", function () {
     if (window.scrollY >= 590) {
         scrollToTop.classList.remove("opacity-0", "invisible");
@@ -346,5 +461,6 @@ window.addEventListener("scroll", function () {
 scrollToTop.addEventListener("click", function () {
     window.scrollTo({
         top: 0,
+        behavior: "smooth",
     });
 });

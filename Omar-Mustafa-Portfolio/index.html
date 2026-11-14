@@ -1,27 +1,39 @@
 <!DOCTYPE html>
-<html dir="rtl" lang="ar" class="dark">
+<html dir="ltr" lang="en" class="dark">
   <head>
     <!-- Essential Meta Tags (must be first) -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>عمر مصطفى | مطور واجهات أمامية</title>
+    <title>Omar Mustafa | Junior Frontend Developer</title>
 
     <!-- SEO Meta Tags -->
-    <meta name="description" content="Portfolio of Omar Mustafa, a frontend developer focused on building responsive and interactive web interfaces with HTML, CSS, JavaScript, and modern frontend tools." />
-    <meta name="keywords" content="Omar Mustafa, Frontend Developer, HTML, CSS, JavaScript, React, Bootstrap, Tailwind CSS, Web Development" />
-    <meta name="author" content="عمر مصطفى" />
-    <meta name="theme-color" content="#6366f1" />
+    <meta
+      name="description"
+      content="Omar Mustafa is a junior frontend developer building responsive web interfaces with HTML, CSS, and JavaScript."
+    />
+    <meta
+      name="keywords"
+      content="Omar Mustafa, junior frontend developer, HTML, CSS, JavaScript, React, web projects"
+    />
+    <meta name="author" content="Omar Mustafa" />
+    <meta name="theme-color" content="#0f766e" />
 
     <!-- Open Graph / Social Media -->
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="عمر مصطفى | مطور واجهات أمامية" />
-    <meta property="og:description" content="Portfolio of Omar Mustafa, showcasing frontend projects and web development skills." />
-    <meta property="og:locale" content="ar_SA" />
+    <meta property="og:title" content="Omar Mustafa | Junior Frontend Developer" />
+    <meta
+      property="og:description"
+      content="Junior frontend developer building responsive and interactive web interfaces."
+    />
+    <meta property="og:locale" content="en_US" />
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="عمر مصطفى | مطور واجهات أمامية" />
-    <meta name="twitter:description" content="Portfolio of Omar Mustafa, showcasing frontend projects and web development skills." />
+    <meta name="twitter:title" content="Omar Mustafa | Junior Frontend Developer" />
+    <meta
+      name="twitter:description"
+      content="Junior frontend developer building responsive and interactive web interfaces."
+    />
 
     <!-- Resource Hints (preconnect includes dns-prefetch) -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -63,38 +75,37 @@
     <!-- Google Fonts - Non-render-blocking -->
     <link
       rel="preload"
-      href="https://fonts.googleapis.com/css2?family=Alexandria:wght@100..900&family=Cairo:wght@200..1000&family=Tajawal:wght@200;300;400;500;700;800;900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300..800&family=Manrope:wght@200..800&family=Montserrat:wght@100..900&display=swap"
       as="style"
       onload="this.onload=null;this.rel='stylesheet'"
     />
     <noscript>
       <link
-        href="https://fonts.googleapis.com/css2?family=Alexandria:wght@100..900&family=Cairo:wght@200..1000&family=Tajawal:wght@200;300;400;500;700;800;900&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300..800&family=Manrope:wght@200..800&family=Montserrat:wght@100..900&display=swap"
         rel="stylesheet"
       />
     </noscript>
 
-    
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="./assets/imgs/favicon.png" />
     <!-- Main Stylesheet -->
     <link rel="stylesheet" crossorigin href="./assets/css/style.css" />
   </head>
   <body
-    class="font-tajawal bg-gradient-to-br from-slate-100 via-slate-50 to-slate-100 dark:from-slate-950 dark:via-slate-900 dark:to-slate-950 text-slate-900 dark:text-white transition-colors duration-300"
+    class="font-alexandria bg-gradient-to-br from-slate-100 via-slate-50 to-slate-100 dark:from-slate-950 dark:via-slate-900 dark:to-slate-950 text-slate-900 dark:text-white transition-colors duration-300"
   >
     <!-- Skip to Content Link for Accessibility -->
     <a
       href="#main-content"
       class="skip-link sr-only focus:not-sr-only focus:absolute focus:top-4 focus:right-4 focus:z-[100] focus:bg-primary focus:text-white focus:px-4 focus:py-2 focus:rounded-lg"
     >
-      تخطي إلى المحتوى الرئيسي
+      Skip to main content
     </a>
 
     <nav
       id="header"
       role="navigation"
-      aria-label="التنقل الرئيسي"
+      aria-label="Main navigation"
       class="fixed top-0 left-0 right-0 bg-white/95 dark:bg-slate-950/95 backdrop-blur-md z-50 border-b border-slate-200 dark:border-slate-800 shadow-sm dark:shadow-none"
     >
       <div
@@ -110,16 +121,16 @@
           <div
             class="text-2xl font-bold bg-linear-to-r from-primary to-secondary bg-clip-text text-transparent"
           >
-            عمر مصطفى
+            Omar Mustafa
           </div>
         </div>
         <button
           id="mobile-menu-button"
-          class="mobile-menu-btn rounded-lg p-3 text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800 focus-visible:outline-none"
+          class="mobile-menu-btn p-2 rounded-lg text-slate-700 dark:text-white hover:bg-slate-100 dark:hover:bg-slate-800 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
           type="button"
-          aria-label="فتح قائمة التنقل"
-          aria-controls="nav-links"
+          aria-label="Open navigation menu"
           aria-expanded="false"
+          aria-controls="nav-links"
         >
           <i class="fa-solid fa-bars text-xl" aria-hidden="true"></i>
         </button>
@@ -128,43 +139,43 @@
             class="text-slate-600 dark:text-slate-300 hover:text-primary transition-colors duration-300 text-lg"
             href="#hero-section"
             role="menuitem"
-            >الرئيسية</a
+            >Home</a
           >
           <a
             class="text-slate-600 dark:text-slate-300 hover:text-primary transition-colors duration-300 text-lg"
             href="#about"
             role="menuitem"
-            >عني</a
+            >About</a
           >
           <a
             class="text-slate-600 dark:text-slate-300 hover:text-primary transition-colors duration-300 text-lg"
             href="#portfolio"
             role="menuitem"
-            >الأعمال</a
+            >Projects</a
           >
           <a
             class="text-slate-600 dark:text-slate-300 hover:text-primary transition-colors duration-300 text-lg"
             href="#experience"
             role="menuitem"
-            >الخبرة</a
+            >Education</a
           >
           <a
             class="text-slate-600 dark:text-slate-300 hover:text-primary transition-colors duration-300 text-lg"
             href="#testimonials"
             role="menuitem"
-            >التوصيات</a
+            >Highlights</a
           >
           <a
             class="text-slate-600 dark:text-slate-300 hover:text-primary transition-colors duration-300 text-lg"
             href="#contact"
             role="menuitem"
-            >تواصل</a
+            >Contact</a
           >
           <!-- Theme Toggle Button -->
           <button
             id="theme-toggle-button"
             class="relative w-16 h-8 bg-slate-200 dark:bg-slate-700 rounded-full transition-all duration-300 hover:ring-2 hover:ring-primary/50 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary"
-            aria-label="تبديل الوضع الداكن"
+            aria-label="Toggle dark mode"
             aria-pressed="false"
             type="button"
           >
@@ -179,7 +190,7 @@
               ></i>
               <!-- Moon Icon (visible in dark mode) -->
               <i
-                class="fa-solid fa-moon text-indigo-400 text-sm absolute transition-all duration-300 opacity-0 -rotate-90 scale-0 dark:opacity-100 dark:rotate-0 dark:scale-100"
+                class="fa-solid fa-moon text-teal-400 text-sm absolute transition-all duration-300 opacity-0 -rotate-90 scale-0 dark:opacity-100 dark:rotate-0 dark:scale-100"
                 aria-hidden="true"
               ></i>
             </span>
@@ -192,21 +203,2480 @@
       <!-- ============================================
          HERO SECTION - Modern Split Layout Design
          ============================================ -->
-      <section id="hero-section" class="relative min-h-screen flex items-center overflow-hidden pt-24 pb-16" aria-labelledby="hero-title"><div class="container mx-auto max-w-6xl px-4 md:px-8 text-center relative z-10"><span class="inline-block px-4 py-2 rounded-full bg-primary/10 text-primary font-semibold mb-8">Open to Junior Frontend Developer Opportunities</span><p class="text-xl text-secondary font-semibold mb-3">مرحباً، أنا</p><h1 id="hero-title" class="text-5xl md:text-7xl font-black mb-5">عمر مصطفى</h1><h2 class="text-3xl md:text-4xl font-bold mb-6">Junior Frontend Developer</h2><p class="text-lg md:text-xl text-slate-600 dark:text-slate-300 leading-relaxed max-w-3xl mx-auto mb-9">أبني واجهات ويب متجاوبة وتفاعلية باستخدام HTML وCSS وJavaScript، وأطوّر مهاراتي باستمرار في React.js وتقنيات تطوير الواجهات الحديثة.</p><div class="flex flex-wrap justify-center gap-4 mb-9"><a href="#portfolio" class="px-8 py-4 rounded-xl bg-primary text-white font-bold">استكشف مشاريعي</a><a href="#contact" class="px-8 py-4 rounded-xl border border-slate-300 dark:border-slate-600 font-bold">تواصل معي</a></div><div class="flex flex-wrap justify-center gap-3 text-sm font-semibold"><span class="px-4 py-2 rounded-lg bg-slate-100 dark:bg-slate-800">HTML5</span><span class="px-4 py-2 rounded-lg bg-slate-100 dark:bg-slate-800">CSS3</span><span class="px-4 py-2 rounded-lg bg-slate-100 dark:bg-slate-800">JavaScript</span><span class="px-4 py-2 rounded-lg bg-slate-100 dark:bg-slate-800">Bootstrap</span><span class="px-4 py-2 rounded-lg bg-slate-100 dark:bg-slate-800">Tailwind CSS</span><span class="px-4 py-2 rounded-lg bg-slate-100 dark:bg-slate-800">React.js — Learning</span></div></div></section>
+      <section
+        id="hero-section"
+        class="relative min-h-screen flex items-center overflow-hidden pt-24 pb-16"
+        aria-labelledby="hero-title"
+      >
+        <!-- Background Elements -->
+        <div class="absolute inset-0 z-0">
+          <!-- Gradient Mesh Background -->
+          <div
+            class="absolute inset-0 bg-gradient-to-br from-slate-50 via-slate-100 to-slate-50 dark:from-slate-950 dark:via-slate-900 dark:to-slate-950"
+          ></div>
+          <!-- Grid Pattern Overlay -->
+          <div
+            class="absolute inset-0 opacity-[0.03] dark:opacity-[0.05]"
+            style="
+              background-image: radial-gradient(
+                circle,
+                currentColor 1px,
+                transparent 1px
+              );
+              background-size: 40px 40px;
+            "
+          ></div>
+        </div>
 
-      <section id="about" class="py-24 px-4 md:px-8 bg-white dark:bg-slate-900/50 relative overflow-hidden" aria-labelledby="about-title"><div class="container mx-auto max-w-5xl relative z-10"><div class="text-center mb-12"><span class="text-primary text-lg font-medium mb-3 block">من أنا</span><h2 id="about-title" class="text-4xl md:text-5xl font-black mb-4">عن عمر مصطفى</h2><div class="w-24 h-1.5 bg-primary mx-auto rounded-full"></div></div><div class="bg-slate-50 dark:bg-slate-800/60 rounded-3xl p-8 md:p-12 border border-slate-200 dark:border-slate-700"><p class="text-xl leading-loose text-slate-700 dark:text-slate-200 mb-6">أنا مطور واجهات أمامية مبتدئ، خريج المعهد العالي لنظم المعلومات الإدارية والحاسب الآلي (HICMIS) دفعة 2024. مهتم ببناء مواقع وتطبيقات ويب سهلة الاستخدام ومتجاوبة مع مختلف الشاشات.</p><p class="text-lg leading-loose text-slate-600 dark:text-slate-300 mb-8">أعمل باستخدام HTML وCSS وJavaScript، ولدي خبرة عملية في التعامل مع DOM وREST APIs وLocal Storage وبناء واجهات باستخدام Bootstrap وTailwind CSS. أواصل تطوير مهاراتي في React.js وTypeScript من خلال التدريب والمشاريع العملية.</p><div class="grid grid-cols-1 md:grid-cols-3 gap-4"><div class="p-5 rounded-2xl bg-white dark:bg-slate-900"><h3 class="font-bold text-lg mb-2">التعليم</h3><p class="text-slate-500 dark:text-slate-400">HICMIS — خريج 2024</p></div><div class="p-5 rounded-2xl bg-white dark:bg-slate-900"><h3 class="font-bold text-lg mb-2">التدريب</h3><p class="text-slate-500 dark:text-slate-400">Route Academy — Frontend Development</p></div><div class="p-5 rounded-2xl bg-white dark:bg-slate-900"><h3 class="font-bold text-lg mb-2">التركيز الحالي</h3><p class="text-slate-500 dark:text-slate-400">React.js وتطوير واجهات ويب عملية</p></div></div></div></div></section>
+        <!-- Main Content -->
+        <div class="container mx-auto pt-40 lg:pt-0 px-4 md:px-8 z-10">
+          <div
+            class="grid grid-cols-1 lg:grid-cols-2 gap-36 lg:gap-16 items-center"
+          >
+            <!-- Right Side - Text Content (RTL so it's first in DOM) -->
+            <div class="order-2 lg:order-1 text-center lg:text-right">
+              <!-- Status Badge -->
+              <div
+                class="inline-flex items-center gap-3 bg-gradient-to-l from-emerald-500/10 to-emerald-500/5 dark:from-emerald-500/20 dark:to-emerald-500/10 backdrop-blur-sm border border-emerald-500/30 rounded-full px-5 py-2.5 mb-8"
+              >
+                <span class="relative flex h-2.5 w-2.5">
+                  <span
+                    class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"
+                  ></span>
+                  <span
+                    class="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-500"
+                  ></span>
+                </span>
+                <span
+                  class="text-sm font-semibold text-emerald-600 dark:text-emerald-400"
+                  >Open to entry-level opportunities</span
+                >
+              </div>
 
-      <section id="skills-section" class="py-24 px-4 md:px-8 bg-slate-50 dark:bg-transparent relative overflow-hidden" aria-labelledby="skills-title"><div class="container mx-auto max-w-6xl relative z-10"><div class="text-center mb-14"><span class="text-secondary text-lg font-medium mb-3 block">ما أستخدمه</span><h2 id="skills-title" class="text-4xl md:text-5xl font-black mb-4">المهارات والتقنيات</h2><div class="w-24 h-1.5 bg-secondary mx-auto rounded-full"></div></div><div class="grid grid-cols-2 md:grid-cols-4 gap-5"><div class="p-6 rounded-2xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-center"><i class="fa-brands fa-html5 text-4xl text-primary mb-4" aria-hidden="true"></i><h3 class="font-bold text-lg mb-2">HTML5</h3><p class="text-sm text-slate-500 dark:text-slate-400">Core</p></div><div class="p-6 rounded-2xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-center"><i class="fa-brands fa-css3-alt text-4xl text-primary mb-4" aria-hidden="true"></i><h3 class="font-bold text-lg mb-2">CSS3</h3><p class="text-sm text-slate-500 dark:text-slate-400">Core</p></div><div class="p-6 rounded-2xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-center"><i class="fa-brands fa-js text-4xl text-primary mb-4" aria-hidden="true"></i><h3 class="font-bold text-lg mb-2">JavaScript ES6+</h3><p class="text-sm text-slate-500 dark:text-slate-400">Core</p></div><div class="p-6 rounded-2xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-center"><i class="fa-brands fa-bootstrap text-4xl text-primary mb-4" aria-hidden="true"></i><h3 class="font-bold text-lg mb-2">Bootstrap</h3><p class="text-sm text-slate-500 dark:text-slate-400">Styling</p></div><div class="p-6 rounded-2xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-center"><i class="fa-solid fa-wind text-4xl text-primary mb-4" aria-hidden="true"></i><h3 class="font-bold text-lg mb-2">Tailwind CSS</h3><p class="text-sm text-slate-500 dark:text-slate-400">Styling</p></div><div class="p-6 rounded-2xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-center"><i class="fa-brands fa-react text-4xl text-primary mb-4" aria-hidden="true"></i><h3 class="font-bold text-lg mb-2">React.js</h3><p class="text-sm text-slate-500 dark:text-slate-400">Currently learning</p></div><div class="p-6 rounded-2xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-center"><i class="fa-solid fa-code text-4xl text-primary mb-4" aria-hidden="true"></i><h3 class="font-bold text-lg mb-2">TypeScript</h3><p class="text-sm text-slate-500 dark:text-slate-400">Fundamentals</p></div><div class="p-6 rounded-2xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-center"><i class="fa-brands fa-github text-4xl text-primary mb-4" aria-hidden="true"></i><h3 class="font-bold text-lg mb-2">Git & GitHub</h3><p class="text-sm text-slate-500 dark:text-slate-400">Tools</p></div><div class="p-6 rounded-2xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-center"><i class="fa-solid fa-plug text-4xl text-primary mb-4" aria-hidden="true"></i><h3 class="font-bold text-lg mb-2">REST APIs</h3><p class="text-sm text-slate-500 dark:text-slate-400">Integration</p></div><div class="p-6 rounded-2xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-center"><i class="fa-solid fa-diagram-project text-4xl text-primary mb-4" aria-hidden="true"></i><h3 class="font-bold text-lg mb-2">DOM & Events</h3><p class="text-sm text-slate-500 dark:text-slate-400">JavaScript</p></div><div class="p-6 rounded-2xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-center"><i class="fa-solid fa-database text-4xl text-primary mb-4" aria-hidden="true"></i><h3 class="font-bold text-lg mb-2">Local Storage</h3><p class="text-sm text-slate-500 dark:text-slate-400">Browser APIs</p></div><div class="p-6 rounded-2xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-center"><i class="fa-solid fa-mobile-screen text-4xl text-primary mb-4" aria-hidden="true"></i><h3 class="font-bold text-lg mb-2">Responsive Design</h3><p class="text-sm text-slate-500 dark:text-slate-400">CSS</p></div></div></div></section>
+              <!-- Main Heading -->
+              <div class="mb-8">
+                <p
+                  class="text-xl md:text-2xl text-slate-500 dark:text-slate-400 mb-3 font-medium"
+                >
+                  Hello, I'm 👋
+                </p>
+                <h1
+                  id="hero-title"
+                  class="text-4xl md:text-6xl lg:text-7xl font-black leading-tight"
+                >
+                  <span class="relative inline-block">
+                    <span
+                      class="bg-gradient-to-l pb-8 from-primary via-secondary to-accent bg-clip-text text-transparent bg-[length:200%_auto] animate-gradient"
+                    >
+                      Omar Mustafa
+                    </span>
+                  </span>
+                </h1>
+              </div>
 
-      <section id="portfolio" class="py-24 px-4 md:px-8 bg-white dark:bg-slate-900/50 relative overflow-hidden" aria-labelledby="portfolio-title"><div class="container mx-auto max-w-7xl relative z-10"><div class="text-center mb-14"><span class="text-primary text-lg font-medium mb-3 block">أعمالي</span><h2 id="portfolio-title" class="text-4xl md:text-5xl font-black mb-4">مشاريع مختارة</h2><div class="w-24 h-1.5 bg-primary mx-auto rounded-full"></div><p class="text-slate-500 dark:text-slate-400 mt-5">مشاريع واجهات وتطبيقات ويب نفذتها أثناء التعلم والتدريب.</p></div><div class="flex justify-center gap-3 mb-10 flex-wrap" id="portfolio-filters" role="group" aria-label="فلترة المشاريع"><button class="portfolio-filter active px-6 py-3 rounded-xl bg-primary text-white font-bold" data-filter="all" aria-pressed="true" type="button">الكل</button><button class="portfolio-filter px-6 py-3 rounded-xl bg-slate-100 dark:bg-slate-800 font-bold" data-filter="web" aria-pressed="false" type="button">مواقع الويب</button><button class="portfolio-filter px-6 py-3 rounded-xl bg-slate-100 dark:bg-slate-800 font-bold" data-filter="app" aria-pressed="false" type="button">التطبيقات</button></div><div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7" id="portfolio-grid"><article class="portfolio-item group rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800" data-category="app"><div class="h-40 flex items-center justify-center bg-gradient-to-br from-primary/20 via-secondary/20 to-accent/20"><i class="fa-solid fa-address-book text-6xl text-primary" aria-hidden="true"></i></div><div class="p-6"><span class="text-sm font-semibold text-primary">Web Application</span><h3 class="text-2xl font-bold my-3">Contact Hub</h3><p class="text-slate-600 dark:text-slate-300 leading-relaxed mb-4">Contact manager with add, edit, delete, search, favorites, emergency contacts, and localStorage.</p><p class="text-sm text-slate-500 dark:text-slate-400 mb-5">HTML • CSS • Bootstrap • JavaScript</p><a href="https://github.com/omarmustafa62/Contact-Hub-Contact-Manager" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-5 py-3 rounded-xl bg-primary text-white font-bold"><i class="fa-brands fa-github" aria-hidden="true"></i> View Source</a></div></article><article class="portfolio-item group rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800" data-category="app"><div class="h-40 flex items-center justify-center bg-gradient-to-br from-primary/20 via-secondary/20 to-accent/20"><i class="fa-solid fa-utensils text-6xl text-primary" aria-hidden="true"></i></div><div class="p-6"><span class="text-sm font-semibold text-primary">Web Application</span><h3 class="text-2xl font-bold my-3">What's For Dinner</h3><p class="text-slate-600 dark:text-slate-300 leading-relaxed mb-4">Recipe discovery interface with recipe details, ingredients, cooking steps, and meal information.</p><p class="text-sm text-slate-500 dark:text-slate-400 mb-5">HTML • CSS • Bootstrap • JavaScript</p><a href="https://github.com/omarmustafa62/Whats-For-Dinner-Recipe-App" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-5 py-3 rounded-xl bg-primary text-white font-bold"><i class="fa-brands fa-github" aria-hidden="true"></i> View Source</a></div></article><article class="portfolio-item group rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800" data-category="web"><div class="h-40 flex items-center justify-center bg-gradient-to-br from-primary/20 via-secondary/20 to-accent/20"><i class="fa-solid fa-chart-pie text-6xl text-primary" aria-hidden="true"></i></div><div class="p-6"><span class="text-sm font-semibold text-primary">Website</span><h3 class="text-2xl font-bold my-3">Muddabir Finance Dashboard</h3><p class="text-slate-600 dark:text-slate-300 leading-relaxed mb-4">Arabic RTL finance dashboard UI showing balances, transactions, budgets, and payment methods.</p><p class="text-sm text-slate-500 dark:text-slate-400 mb-5">HTML • CSS • Responsive Design</p><a href="https://github.com/omarmustafa62/Muddabir-Finance-Dashboard" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-5 py-3 rounded-xl bg-primary text-white font-bold"><i class="fa-brands fa-github" aria-hidden="true"></i> View Source</a></div></article><article class="portfolio-item group rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800" data-category="web"><div class="h-40 flex items-center justify-center bg-gradient-to-br from-primary/20 via-secondary/20 to-accent/20"><i class="fa-solid fa-gamepad text-6xl text-primary" aria-hidden="true"></i></div><div class="p-6"><span class="text-sm font-semibold text-primary">Website</span><h3 class="text-2xl font-bold my-3">GameArena</h3><p class="text-slate-600 dark:text-slate-300 leading-relaxed mb-4">Responsive gaming and esports website featuring game showcases, teams, and tournament content.</p><p class="text-sm text-slate-500 dark:text-slate-400 mb-5">HTML • CSS • Bootstrap</p><a href="https://github.com/omarmustafa62/GameArena-Gaming-Website" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-5 py-3 rounded-xl bg-primary text-white font-bold"><i class="fa-brands fa-github" aria-hidden="true"></i> View Source</a></div></article><article class="portfolio-item group rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800" data-category="web"><div class="h-40 flex items-center justify-center bg-gradient-to-br from-primary/20 via-secondary/20 to-accent/20"><i class="fa-solid fa-house text-6xl text-primary" aria-hidden="true"></i></div><div class="p-6"><span class="text-sm font-semibold text-primary">Website</span><h3 class="text-2xl font-bold my-3">EliteHomes</h3><p class="text-slate-600 dark:text-slate-300 leading-relaxed mb-4">Real estate website concept with property listings, categories, locations, services, and FAQs.</p><p class="text-sm text-slate-500 dark:text-slate-400 mb-5">HTML • CSS • Bootstrap</p><a href="https://github.com/omarmustafa62/EliteHomes" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-5 py-3 rounded-xl bg-primary text-white font-bold"><i class="fa-brands fa-github" aria-hidden="true"></i> View Source</a></div></article><article class="portfolio-item group rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800" data-category="app"><div class="h-40 flex items-center justify-center bg-gradient-to-br from-primary/20 via-secondary/20 to-accent/20"><i class="fa-solid fa-earth-americas text-6xl text-primary" aria-hidden="true"></i></div><div class="p-6"><span class="text-sm font-semibold text-primary">Web Application</span><h3 class="text-2xl font-bold my-3">Cosmos Space Dashboard</h3><p class="text-slate-600 dark:text-slate-300 leading-relaxed mb-4">Space-themed dashboard consuming external API data and rendering dynamic information.</p><p class="text-sm text-slate-500 dark:text-slate-400 mb-5">JavaScript • REST API • HTML • CSS</p><a href="https://github.com/omarmustafa62/Cosmos-Space-Dashboard" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-5 py-3 rounded-xl bg-primary text-white font-bold"><i class="fa-brands fa-github" aria-hidden="true"></i> View Source</a></div></article></div></div></section>
+              <!-- Role Badge -->
+              <div
+                class="inline-flex items-center gap-3 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 px-5 py-2.5 rounded-full mb-8"
+              >
+                <div
+                  class="w-8 h-8 bg-gradient-to-br from-primary to-secondary rounded-full flex items-center justify-center"
+                >
+                  <i class="fa-solid fa-code text-white text-sm"></i>
+                </div>
+                <span class="font-bold text-slate-800 dark:text-white"
+                  >Junior Frontend Developer</span
+                >
+              </div>
 
-      <section id="experience" class="experience-section py-24 px-4 md:px-8 bg-slate-50 dark:bg-transparent relative overflow-hidden" aria-labelledby="experience-title"><div class="container mx-auto max-w-5xl relative z-10"><div class="text-center mb-14"><span class="text-secondary text-lg font-medium mb-3 block">رحلتي التعليمية والمهنية</span><h2 id="experience-title" class="text-4xl md:text-5xl font-black mb-4">التعليم والتدريب</h2><div class="w-24 h-1.5 bg-secondary mx-auto rounded-full"></div></div><div class="space-y-6"><article class="p-7 md:p-9 rounded-2xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700"><span class="text-sm font-bold text-primary">Nov 2026 — Present</span><h3 class="text-2xl font-bold mt-2 mb-2">Frontend Development Intern</h3><p class="text-lg text-secondary mb-3">Codveda Technologies · Remote</p><p class="text-slate-600 dark:text-slate-300 leading-relaxed">Currently completing practical frontend development tasks involving responsive interfaces, React applications, API integration, and frontend quality improvements.</p></article><article class="p-7 md:p-9 rounded-2xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700"><h3 class="text-2xl font-bold mb-2">Frontend Development</h3><p class="text-lg text-secondary mb-3">Route Academy</p><p class="text-slate-600 dark:text-slate-300 leading-relaxed">Practical training in frontend development, including JavaScript, TypeScript, CSS frameworks, and React.js.</p></article><article class="p-7 md:p-9 rounded-2xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700"><span class="text-sm font-bold text-primary">2024</span><h3 class="text-2xl font-bold mt-2 mb-2">High Institute of Computer and Management Information Systems (HICMIS)</h3><p class="text-slate-600 dark:text-slate-300">Graduate</p></article></div></div></section>
+              <!-- Description -->
+              <p
+                class="text-lg md:text-xl text-slate-600 dark:text-slate-400 mb-10 max-w-xl mx-auto lg:mx-0 lg:mr-0 leading-relaxed"
+              >
+                I'm a junior frontend developer building
+                <span class="text-primary font-semibold">responsive, interactive web interfaces</span>
+                with HTML, CSS, and JavaScript. I'm looking for an entry-level role where I can contribute and grow.
+              </p>
 
-      <section id="testimonials" class="py-24 px-4 md:px-8 bg-white dark:bg-slate-900/50 relative overflow-hidden" aria-labelledby="testimonials-title"><div class="container mx-auto max-w-6xl relative z-10"><div class="text-center mb-14"><span class="text-accent text-lg font-medium mb-3 block">طريقة عملي</span><h2 id="testimonials-title" class="text-4xl md:text-5xl font-black mb-4">ما أركز عليه في كل مشروع</h2><div class="w-24 h-1.5 bg-accent mx-auto rounded-full"></div></div><div id="testimonials-carousel" class="grid grid-cols-1 md:grid-cols-3 gap-6" role="region" aria-label="مبادئ العمل"><article class="testimonial-card p-8 rounded-2xl bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700"><i class="fa-solid fa-mobile-screen text-3xl text-primary mb-5"></i><h3 class="text-xl font-bold mb-3">Responsive by Design</h3><p class="text-slate-600 dark:text-slate-300 leading-relaxed">بناء واجهات تعمل بشكل واضح ومريح على الموبايل والتابلت والشاشات الكبيرة.</p></article><article class="testimonial-card p-8 rounded-2xl bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700"><i class="fa-solid fa-code text-3xl text-primary mb-5"></i><h3 class="text-xl font-bold mb-3">Clear, Maintainable Code</h3><p class="text-slate-600 dark:text-slate-300 leading-relaxed">تنظيم الملفات والكود واستخدام أنماط واضحة تسهّل التطوير والصيانة.</p></article><article class="testimonial-card p-8 rounded-2xl bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700"><i class="fa-solid fa-user-check text-3xl text-primary mb-5"></i><h3 class="text-xl font-bold mb-3">User-Focused Interfaces</h3><p class="text-slate-600 dark:text-slate-300 leading-relaxed">الاهتمام بسهولة الاستخدام ووضوح المحتوى أثناء بناء الواجهات.</p></article></div></div></section>
+              <!-- CTA Buttons -->
+              <div
+                class="flex flex-wrap justify-center lg:justify-end gap-4 mb-10"
+              >
+                <a
+                  href="#portfolio"
+                  class="group relative inline-flex items-center gap-3 bg-gradient-to-l from-primary to-secondary px-8 py-4 rounded-2xl text-lg font-bold text-white overflow-hidden transition-all duration-300 hover:-translate-y-1"
+                >
+                  <span class="relative z-10">Explore my projects</span>
+                  <i
+                    class="fa-solid fa-arrow-left relative z-10 transition-transform duration-300 group-hover:-translate-x-2"
+                  ></i>
+                  <div
+                    class="absolute inset-0 bg-gradient-to-l from-secondary to-accent opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                  ></div>
+                </a>
+                <a
+                  href="#contact"
+                  class="group inline-flex items-center gap-3 bg-white dark:bg-slate-800 border-2 border-slate-200 dark:border-slate-700 text-slate-800 dark:text-white px-8 py-4 rounded-2xl text-lg font-bold transition-all duration-300 hover:border-primary hover:text-primary hover:-translate-y-1 hover:shadow-lg"
+                >
+                  <span>Get in touch</span>
+                  <i
+                    class="fa-solid fa-paper-plane transition-transform duration-300 group-hover:-translate-y-1 group-hover:translate-x-1"
+                  ></i>
+                </a>
+              </div>
 
-      <section id="statistics-section" class="py-16 px-4 md:px-8 bg-slate-50 dark:bg-transparent"><div class="container mx-auto max-w-5xl text-center"><h2 class="text-3xl font-black mb-8">التطوير المستمر من خلال المشاريع العملية</h2><div class="grid grid-cols-1 sm:grid-cols-3 gap-5"><div class="p-6 rounded-2xl bg-white dark:bg-slate-800"><p class="text-3xl font-black text-primary">2024</p><p class="text-slate-500 dark:text-slate-400 mt-2">سنة التخرج</p></div><div class="p-6 rounded-2xl bg-white dark:bg-slate-800"><p class="text-3xl font-black text-primary">6+</p><p class="text-slate-500 dark:text-slate-400 mt-2">مشاريع Frontend عامة على GitHub</p></div><div class="p-6 rounded-2xl bg-white dark:bg-slate-800"><p class="text-3xl font-black text-primary">Ongoing</p><p class="text-slate-500 dark:text-slate-400 mt-2">تدريب وتطوير مهارات Frontend</p></div></div></div></section>
+              <!-- Tech Stack -->
+              <div class="flex flex-wrap justify-center lg:justify-end gap-2">
+                <div
+                  class="flex items-center gap-2 px-4 py-2.5 bg-white dark:bg-slate-800 rounded-xl border border-slate-200 dark:border-slate-700 shadow-sm hover:shadow-md hover:border-[#E34F26] transition-all duration-300 group"
+                >
+                  <i
+                    class="fa-brands fa-html5 text-xl text-[#E34F26]"
+                  ></i>
+                  <span
+                    class="text-sm font-semibold text-slate-700 dark:text-slate-300"
+                    >HTML5</span
+                  >
+                </div>
+                <div
+                  class="flex items-center gap-2 px-4 py-2.5 bg-white dark:bg-slate-800 rounded-xl border border-slate-200 dark:border-slate-700 shadow-sm hover:shadow-md hover:border-[#3178C6] transition-all duration-300 group"
+                >
+                  <svg
+                    class="w-5 h-5 text-[#3178C6]"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                  >
+                    <path
+                      d="M1.125 0C.502 0 0 .502 0 1.125v21.75C0 23.498.502 24 1.125 24h21.75c.623 0 1.125-.502 1.125-1.125V1.125C24 .502 23.498 0 22.875 0zm17.363 9.75c.612 0 1.154.037 1.627.111a6.38 6.38 0 0 1 1.306.34v2.458a3.95 3.95 0 0 0-.643-.361 5.093 5.093 0 0 0-.717-.26 5.453 5.453 0 0 0-1.426-.2c-.3 0-.573.028-.819.086a2.1 2.1 0 0 0-.623.242c-.17.104-.3.229-.393.374a.888.888 0 0 0-.14.49c0 .196.053.373.156.529.104.156.252.304.443.444s.423.276.696.41c.273.135.582.274.926.416.47.197.892.407 1.266.628.374.222.695.473.963.753.268.279.472.598.614.957.142.359.214.776.214 1.253 0 .657-.125 1.21-.373 1.656a3.033 3.033 0 0 1-1.012 1.085 4.38 4.38 0 0 1-1.487.596c-.566.12-1.163.18-1.79.18a9.916 9.916 0 0 1-1.84-.164 5.544 5.544 0 0 1-1.512-.493v-2.63a5.033 5.033 0 0 0 3.237 1.2c.333 0 .624-.03.872-.09.249-.06.456-.144.623-.25.166-.108.29-.234.373-.38a1.023 1.023 0 0 0-.074-1.089 2.12 2.12 0 0 0-.537-.5 5.597 5.597 0 0 0-.807-.444 27.72 27.72 0 0 0-1.007-.436c-.918-.383-1.602-.852-2.053-1.405-.45-.553-.676-1.222-.676-2.005 0-.614.123-1.141.369-1.582.246-.441.58-.804 1.004-1.089a4.494 4.494 0 0 1 1.47-.629 7.536 7.536 0 0 1 1.77-.201zm-15.113.188h9.563v2.166H9.506v9.646H6.789v-9.646H3.375z"
+                    />
+                  </svg>
+                  <span
+                    class="text-sm font-semibold text-slate-700 dark:text-slate-300"
+                    >TypeScript (fundamentals)</span
+                  >
+                </div>
+                <div
+                  class="flex items-center gap-2 px-4 py-2.5 bg-white dark:bg-slate-800 rounded-xl border border-slate-200 dark:border-slate-700 shadow-sm hover:shadow-md hover:border-[#38BDF8] transition-all duration-300 group"
+                >
+                  <svg
+                    class="w-5 h-5 text-[#38BDF8]"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                  >
+                    <path
+                      d="M12.001,4.8c-3.2,0-5.2,1.6-6,4.8c1.2-1.6,2.6-2.2,4.2-1.8c0.913,0.228,1.565,0.89,2.288,1.624 C13.666,10.618,15.027,12,18.001,12c3.2,0,5.2-1.6,6-4.8c-1.2,1.6-2.6,2.2-4.2,1.8c-0.913-0.228-1.565-0.89-2.288-1.624 C16.337,6.182,14.976,4.8,12.001,4.8z M6.001,12c-3.2,0-5.2,1.6-6,4.8c1.2-1.6,2.6-2.2,4.2-1.8c0.913,0.228,1.565,0.89,2.288,1.624 c1.177,1.194,2.538,2.576,5.512,2.576c3.2,0,5.2-1.6,6-4.8c-1.2,1.6-2.6,2.2-4.2,1.8c-0.913-0.228-1.565-0.89-2.288-1.624 C10.337,13.382,8.976,12,6.001,12z"
+                    />
+                  </svg>
+                  <span
+                    class="text-sm font-semibold text-slate-700 dark:text-slate-300"
+                    >Tailwind CSS</span
+                  >
+                </div>
+                <div
+                  class="flex items-center gap-2 px-4 py-2.5 bg-white dark:bg-slate-800 rounded-xl border border-slate-200 dark:border-slate-700 shadow-sm hover:shadow-md hover:border-black dark:hover:border-white transition-all duration-300 group"
+                >
+                  <svg class="hidden" viewBox="0 0 24 24" fill="currentColor">
+                    <path
+                      d="M11.572 0c-.176 0-.31.001-.358.007a19.76 19.76 0 0 1-.364.033C7.443.346 4.25 2.185 2.228 5.012a11.875 11.875 0 0 0-2.119 5.243c-.096.659-.108.854-.108 1.747s.012 1.089.108 1.748c.652 4.506 3.86 8.292 8.209 9.695.779.25 1.6.422 2.534.525.363.04 1.935.04 2.299 0 1.611-.178 2.977-.577 4.323-1.264.207-.106.247-.134.219-.158-.02-.013-.9-1.193-1.955-2.62l-1.919-2.592-2.404-3.558a338.739 338.739 0 0 0-2.422-3.556c-.009-.002-.018 1.579-.023 3.51-.007 3.38-.01 3.515-.052 3.595a.426.426 0 0 1-.206.214c-.075.037-.14.044-.495.044H7.81l-.108-.068a.438.438 0 0 1-.157-.171l-.05-.106.006-4.703.007-4.705.072-.092a.645.645 0 0 1 .174-.143c.096-.047.134-.051.54-.051.478 0 .558.018.682.154.035.038 1.337 1.999 2.895 4.361a10760.433 10760.433 0 0 0 4.735 7.17l1.9 2.879.096-.063a12.317 12.317 0 0 0 2.466-2.163 11.944 11.944 0 0 0 2.824-6.134c.096-.66.108-.854.108-1.748 0-.893-.012-1.088-.108-1.747-.652-4.506-3.859-8.292-8.208-9.695a12.597 12.597 0 0 0-2.499-.523A33.119 33.119 0 0 0 11.572 0zm4.069 7.217c.347 0 .408.005.486.047a.473.473 0 0 1 .237.277c.018.06.023 1.365.018 4.304l-.006 4.218-.744-1.14-.746-1.14v-3.066c0-1.982.01-3.097.023-3.15a.478.478 0 0 1 .233-.296c.096-.05.13-.054.5-.054z"
+                    />
+                  </svg>
+                  <i class="fa-brands fa-react text-xl text-[#61DAFB]"></i>
+                  <span
+                    class="text-sm font-semibold text-slate-700 dark:text-slate-300"
+                    >React.js (learning)</span
+                  >
+                </div>
+              </div>
+            </div>
 
-      <section id="contact" class="py-24 px-4 md:px-8 bg-white dark:bg-slate-900/50 relative overflow-hidden" aria-labelledby="contact-title"><div class="container mx-auto max-w-5xl relative z-10"><div class="text-center mb-14"><span class="text-primary text-lg font-medium mb-3 block">تواصل معي</span><h2 id="contact-title" class="text-4xl md:text-5xl font-black mb-4">يسعدني التواصل معك</h2><div class="w-24 h-1.5 bg-primary mx-auto rounded-full"></div><p class="text-slate-500 dark:text-slate-400 mt-5">للتواصل بخصوص فرص Junior Frontend Developer أو التدريب أو المشاريع.</p></div><div class="grid grid-cols-1 md:grid-cols-2 gap-5"><a href="mailto:omarmustafa62dx@gmail.com" class="p-7 rounded-2xl bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700"><i class="fa-solid fa-envelope text-3xl text-primary mb-4"></i><h3 class="font-bold text-xl mb-2">Email</h3><p class="text-slate-600 dark:text-slate-300">omarmustafa62dx@gmail.com</p></a><a href="tel:+201092857117" class="p-7 rounded-2xl bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700"><i class="fa-solid fa-phone text-3xl text-primary mb-4"></i><h3 class="font-bold text-xl mb-2">Phone</h3><p class="text-slate-600 dark:text-slate-300">+20 109 285 7117</p></a><a href="https://github.com/omarmustafa62" target="_blank" rel="noopener noreferrer" class="p-7 rounded-2xl bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700"><i class="fa-brands fa-github text-3xl text-primary mb-4"></i><h3 class="font-bold text-xl mb-2">GitHub</h3><p class="text-slate-600 dark:text-slate-300">github.com/omarmustafa62</p></a><a href="https://www.linkedin.com/in/omarmustafaa/" target="_blank" rel="noopener noreferrer" class="p-7 rounded-2xl bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700"><i class="fa-brands fa-linkedin text-3xl text-primary mb-4"></i><h3 class="font-bold text-xl mb-2">LinkedIn</h3><p class="text-slate-600 dark:text-slate-300">linkedin.com/in/omarmustafaa</p></a></div></div></section>
+            <!-- Left Side - Visual Element -->
+            <div
+              class="order-1 lg:order-2 relative flex justify-center lg:justify-start"
+            >
+              <!-- Decorative Ring -->
+              <div class="absolute inset-0 flex items-center justify-center">
+                <div
+                  class="w-[350px] h-[350px] md:w-[450px] md:h-[450px] rounded-full border-2 border-dashed border-primary/30 animate-spin"
+                  style="animation-duration: 30s"
+                ></div>
+              </div>
+              <div class="absolute inset-0 flex items-center justify-center">
+                <div
+                  class="w-[280px] h-[280px] md:w-[380px] md:h-[380px] rounded-full border-2 border-secondary/20 animate-spin"
+                  style="animation-duration: 20s; animation-direction: reverse"
+                ></div>
+              </div>
+
+              <!-- Profile Image Container -->
+              <div class="relative z-10">
+                <!-- Gradient Border Ring -->
+                <div
+                  class="absolute -inset-3 bg-gradient-to-br from-primary via-secondary to-accent rounded-full opacity-75 blur-sm animate-pulse"
+                ></div>
+                <div
+                  class="absolute -inset-2 bg-gradient-to-br from-primary via-secondary to-accent rounded-full"
+                ></div>
+
+                <!-- Profile Image -->
+                <div
+                  class="relative w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden bg-slate-200 dark:bg-slate-800 border-4 border-white dark:border-slate-900"
+                >
+                  <img
+                    class="w-full h-full object-cover"
+                    fetchpriority="high"
+                    decoding="async"
+                    src="./assets/imgs/hero-section-img-Dsy3Av-w.webp"
+                    alt="Omar Mustafa, junior frontend developer"
+                  />
+                </div>
+
+                <!-- Floating Badges around image -->
+                <div
+                  class="absolute -top-4 -right-4 bg-white dark:bg-slate-800 rounded-2xl p-3 shadow-xl border border-slate-200 dark:border-slate-700 animate-bounce"
+                  style="animation-duration: 3s"
+                  aria-hidden="true"
+                >
+                  <i class="fa-brands fa-react text-3xl text-[#61DAFB]"></i>
+                </div>
+                <div
+                  class="absolute top-1/4 -left-6 bg-white dark:bg-slate-800 rounded-2xl p-3 shadow-xl border border-slate-200 dark:border-slate-700 animate-bounce"
+                  style="animation-duration: 2.5s; animation-delay: 0.5s"
+                  aria-hidden="true"
+                >
+                  <i class="fa-brands fa-js text-3xl text-yellow-400"></i>
+                </div>
+                <div
+                  class="absolute -bottom-4 -right-4 bg-white dark:bg-slate-800 rounded-2xl p-3 shadow-xl border border-slate-200 dark:border-slate-700 animate-bounce"
+                  style="animation-duration: 3.5s; animation-delay: 1s"
+                  aria-hidden="true"
+                >
+                  <i class="fa-brands fa-css3-alt text-3xl text-blue-500"></i>
+                </div>
+                <div
+                  class="absolute bottom-1/4 -left-6 bg-white dark:bg-slate-800 rounded-2xl p-3 shadow-xl border border-slate-200 dark:border-slate-700 animate-bounce"
+                  style="animation-duration: 2s; animation-delay: 1.5s"
+                  aria-hidden="true"
+                >
+                  <i class="fa-solid fa-code text-3xl text-primary"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Scroll Indicator -->
+          <a
+            href="#about"
+            class="absolute bottom-4 left-1/2 -translate-x-1/2 hidden md:flex flex-col items-center gap-2 animate-bounce hover:text-primary transition-colors duration-300"
+            aria-label="Scroll to the About section"
+          >
+            <span
+              class="text-sm text-slate-500 dark:text-slate-400 hover:text-primary"
+              >Scroll to explore</span
+            >
+            <div
+              class="w-6 h-10 rounded-full border-2 border-slate-400 dark:border-slate-600 hover:border-primary flex justify-center pt-2 transition-colors duration-300"
+            >
+              <div
+                class="w-1.5 h-3 bg-primary rounded-full animate-pulse"
+              ></div>
+            </div>
+          </a>
+        </div>
+      </section>
+
+      <section
+        id="about"
+        class="py-24 px-4 md:px-8 bg-white dark:bg-slate-900/50 relative overflow-hidden"
+        aria-labelledby="about-title"
+      >
+        <!-- Background decorations -->
+        <div
+          class="absolute top-0 left-1/4 w-96 h-96 bg-primary rounded-full filter blur-3xl opacity-10"
+        ></div>
+        <div
+          class="absolute bottom-0 right-1/4 w-80 h-80 bg-secondary rounded-full filter blur-3xl opacity-10"
+        ></div>
+
+        <div class="container mx-auto max-w-7xl relative z-10">
+          <!-- Section Header -->
+          <div class="text-center mb-16">
+            <span class="text-primary text-lg font-medium mb-3 block"
+              >A little about me</span
+            >
+            <h2 class="text-5xl font-black mb-4">
+              About
+              <span
+                class="bg-gradient-to-l from-primary to-secondary bg-clip-text text-transparent"
+                >Omar Mustafa</span
+              >
+            </h2>
+            <div
+              class="w-24 h-1.5 bg-gradient-to-l from-primary to-secondary mx-auto rounded-full"
+            ></div>
+          </div>
+
+          <!-- Main Content Grid -->
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+            <!-- Right Side (RTL) - Clean About Design -->
+            <div class="space-y-8">
+              <!-- Personal Story -->
+              <div class="relative">
+                <!-- Large decorative quote -->
+                <div
+                  class="absolute -top-4 -right-2 text-8xl text-primary/10 font-serif leading-none"
+                >
+                  "
+                </div>
+
+                <div class="relative z-10">
+                  <h3
+                    class="text-3xl font-black mb-6 text-slate-800 dark:text-white"
+                  >
+                    I enjoy turning ideas
+                    <span class="text-primary">into digital experiences</span>
+                  </h3>
+                  <p
+                    class="text-lg text-slate-600 dark:text-slate-300 leading-relaxed mb-4"
+                  >
+                    I'm a junior frontend developer with hands-on experience building responsive and interactive web projects.
+                  </p>
+                  <p
+                    class="text-lg text-slate-600 dark:text-slate-300 leading-relaxed"
+                  >
+                    I work with HTML, CSS, and JavaScript, and I'm developing my React skills and TypeScript fundamentals through projects and professional training.
+                  </p>
+                </div>
+              </div>
+
+              <!-- Simple Timeline -->
+              <div class="flex items-center gap-4 flex-wrap">
+                <div
+                  class="flex items-center gap-2 bg-gray-200 dark:bg-slate-800 px-4 py-2 rounded-full"
+                >
+                  <i class="fa-solid fa-graduation-cap text-primary"></i>
+                  <span class="text-sm font-medium">HICMIS graduate, 2024</span>
+                </div>
+                <div
+                  class="flex items-center gap-2 bg-gray-200 dark:bg-slate-800 px-4 py-2 rounded-full"
+                >
+                  <i class="fa-solid fa-briefcase text-secondary"></i>
+                  <span class="text-sm font-medium">5 featured projects</span>
+                </div>
+                <div
+                  class="flex items-center gap-2 bg-gray-200 dark:bg-slate-800 px-4 py-2 rounded-full"
+                >
+                  <i class="fa-solid fa-users text-accent"></i>
+                  <span class="text-sm font-medium">Route Academy training, 2026</span>
+                </div>
+              </div>
+
+              <!-- Services List -->
+              <div
+                class="bg-slate-50 dark:bg-slate-800/40 backdrop-blur-sm rounded-2xl p-6 border border-slate-200 dark:border-slate-700"
+              >
+                <h4 class="font-bold text-lg mb-4 flex items-center gap-2">
+                  What I'm building toward
+                  <i class="fa-solid fa-rocket text-primary"></i>
+                </h4>
+                <div class="space-y-3">
+                  <div
+                    class="flex items-center gap-3 text-slate-600 dark:text-slate-300"
+                  >
+                    <span class="w-2 h-2 bg-primary rounded-full"></span>
+                    <span>Building web interfaces with HTML, CSS, and JavaScript</span>
+                  </div>
+                  <div
+                    class="flex items-center gap-3 text-slate-600 dark:text-slate-300"
+                  >
+                    <span class="w-2 h-2 bg-secondary rounded-full"></span>
+                    <span>Creating responsive layouts with Flexbox and CSS Grid</span>
+                  </div>
+                  <div
+                    class="flex items-center gap-3 text-slate-600 dark:text-slate-300"
+                  >
+                    <span class="w-2 h-2 bg-accent rounded-full"></span>
+                    <span>Working with the DOM, events, and REST APIs</span>
+                  </div>
+                  <div
+                    class="flex items-center gap-3 text-slate-600 dark:text-slate-300"
+                  >
+                    <span class="w-2 h-2 bg-emerald-500 rounded-full"></span>
+                    <span>Using Local Storage, CRUD operations, and form validation</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Left Side (RTL) - Terminal + Quick Info -->
+            <div class="space-y-6">
+              <!-- Code Terminal Card -->
+              <div
+                class="bg-slate-900 dark:bg-slate-950 rounded-2xl overflow-hidden shadow-2xl border border-slate-700 hover:shadow-primary/20 hover:border-slate-600 transition-all duration-500 transform hover:-translate-y-1"
+              >
+                <!-- Terminal Header -->
+                <div
+                  class="flex items-center gap-2 px-4 py-3 bg-slate-800 border-b border-slate-700"
+                >
+                  <div class="w-3 h-3 rounded-full bg-red-500"></div>
+                  <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
+                  <div class="w-3 h-3 rounded-full bg-green-500"></div>
+                  <span class="text-slate-400 text-sm mr-4 font-mono"
+                    >omar.js</span
+                  >
+                </div>
+                <!-- Terminal Content -->
+                <div
+                  class="p-6 font-mono text-sm md:text-base leading-relaxed overflow-x-auto text-slate-200"
+                  dir="ltr"
+                >
+                  <p class="text-slate-500">// A quick introduction</p>
+                  <p class="mt-3">
+                    <span class="text-amber-400">const</span>
+                    <span class="text-blue-400">omar</span> = {
+                  </p>
+                  <p class="ml-4">
+                    <span class="text-green-400">name</span>:
+                    <span class="text-yellow-400">"Omar Mustafa"</span>,
+                  </p>
+                  <p class="ml-4">
+                    <span class="text-green-400">title</span>:
+                    <span class="text-yellow-400">"Frontend Developer"</span>,
+                  </p>
+                  <p class="ml-4">
+                    <span class="text-green-400">level</span>:
+                    <span class="text-yellow-400">"Junior"</span>,
+                  </p>
+                  <p class="ml-4">
+                    <span class="text-green-400">location</span>:
+                    <span class="text-yellow-400">"Egypt"</span>,
+                  </p>
+                  <p class="ml-4">
+                    <span class="text-green-400">skills</span>: [
+                  </p>
+                  <p class="ml-8">
+                    <span class="text-yellow-400">"HTML"</span>,
+                    <span class="text-yellow-400">"CSS"</span>,
+                  </p>
+                  <p class="ml-8">
+                    <span class="text-yellow-400">"JavaScript"</span>,
+                    <span class="text-yellow-400">"React (learning)"</span>
+                  </p>
+                  <p class="ml-4">],</p>
+                  <p class="ml-4">
+                    <span class="text-green-400">education</span>:
+                    <span class="text-yellow-400"
+                      >"HICMIS, Graduate 2024"</span
+                    >,
+                  </p>
+                  <p class="ml-4">
+                    <span class="text-green-400">training</span>:
+                    <span class="text-yellow-400">"Route Academy, 2026"</span>
+                  </p>
+                  <p>};</p>
+                  <p class="mt-4">
+                    <span class="text-amber-400">export default</span>
+                    <span class="text-blue-400">omar</span>;
+                  </p>
+                </div>
+              </div>
+
+              <!-- Quick Stats Row -->
+              <div class="grid grid-cols-3 gap-4">
+                <div
+                  class="bg-slate-50 dark:bg-slate-800/80 backdrop-blur-sm rounded-2xl p-5 text-center border border-slate-200 dark:border-slate-700 hover:border-primary transition-all duration-300"
+                >
+                  <div class="text-3xl font-black text-primary mb-1">5</div>
+                  <div class="text-sm text-slate-600 dark:text-slate-400">
+                    documented projects
+                  </div>
+                </div>
+                <div
+                  class="bg-slate-50 dark:bg-slate-800/80 backdrop-blur-sm rounded-2xl p-5 text-center border border-slate-200 dark:border-slate-700 hover:border-secondary transition-all duration-300"
+                >
+                  <div class="text-3xl font-black text-secondary mb-1">2024</div>
+                  <div class="text-sm text-slate-600 dark:text-slate-400">
+                    graduation year
+                  </div>
+                </div>
+                <div
+                  class="bg-slate-50 dark:bg-slate-800/80 backdrop-blur-sm rounded-2xl p-5 text-center border border-slate-200 dark:border-slate-700 hover:border-accent transition-all duration-300"
+                >
+                  <div class="text-3xl font-black text-accent mb-1">B2</div>
+                  <div class="text-sm text-slate-600 dark:text-slate-400">
+                    English proficiency
+                  </div>
+                </div>
+              </div>
+
+              <!-- Social Links -->
+              <div class="flex gap-4 justify-center lg:justify-end">
+                <a
+                  href="https://github.com/omarmustafa62"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="w-12 h-12 bg-slate-50 dark:bg-slate-800 rounded-xl flex items-center justify-center hover:bg-primary hover:text-white transition-all duration-300 border border-slate-200 dark:border-slate-700"
+                  aria-label="GitHub"
+                >
+                  <i class="fa-brands fa-github text-xl" aria-hidden="true"></i>
+                </a>
+                <a
+                  href="https://www.linkedin.com/in/omarmustafaa"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="w-12 h-12 bg-slate-50 dark:bg-slate-800 rounded-xl flex items-center justify-center hover:bg-[#0A66C2] hover:text-white transition-all duration-300 border border-slate-200 dark:border-slate-700"
+                  aria-label="LinkedIn"
+                >
+                  <i
+                    class="fa-brands fa-linkedin text-xl"
+                    aria-hidden="true"
+                  ></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section
+        id="skills-section"
+        class="py-24 px-4 md:px-8 bg-slate-50 dark:bg-transparent relative overflow-hidden"
+        aria-labelledby="skills-title"
+      >
+        <div
+          class="absolute bottom-0 right-1/3 w-96 h-96 bg-secondary rounded-full filter blur-3xl opacity-10"
+        ></div>
+        <div class="container mx-auto max-w-7xl relative z-10">
+          <div class="text-center mb-16">
+            <span class="text-secondary text-lg font-medium mb-3 block"
+              >Technical skills</span
+            >
+            <h2 id="skills-title" class="text-5xl font-black mb-4">
+              Skills &
+              <span
+                class="bg-linear-to-r from-secondary to-accent bg-clip-text text-transparent"
+                >technologies</span
+              >
+            </h2>
+            <div
+              class="w-24 h-1.5 bg-linear-to-r from-secondary to-accent mx-auto rounded-full"
+            ></div>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div
+              class="bg-white dark:bg-slate-800/30 backdrop-blur-sm rounded-2xl p-8 border border-slate-300 dark:border-slate-700 hover:border-primary transition-all duration-300 hover:transform hover:scale-105"
+            >
+              <div class="flex items-center justify-between mb-6">
+                <h3 class="text-2xl font-bold">React.js</h3>
+                <i
+                  class="fa-brands fa-react text-4xl text-primary"
+                  aria-hidden="true"
+                ></i>
+              </div>
+              <p class="text-sm font-bold text-primary mb-3">Currently learning</p>
+              <p class="text-slate-500 dark:text-slate-400">
+                Currently developing my React.js skills through hands-on projects.
+              </p>
+            </div>
+
+            <div
+              class="bg-slate-50 dark:bg-slate-800/30 backdrop-blur-sm rounded-2xl p-8 border border-slate-300 dark:border-slate-700 hover:border-secondary transition-all duration-300 hover:transform hover:scale-105"
+            >
+              <div class="flex items-center justify-between mb-6">
+                <h3 class="text-2xl font-bold">JavaScript (ES6+)</h3>
+                <i
+                  class="fa-brands fa-js text-4xl text-secondary"
+                  aria-hidden="true"
+                ></i>
+              </div>
+              <p class="text-sm font-bold text-secondary mb-3">Core skills</p>
+              <p class="text-slate-500 dark:text-slate-400">
+                DOM, events, Fetch API, REST APIs, JSON, and asynchronous JavaScript.
+              </p>
+            </div>
+
+            <div
+              class="bg-slate-50 dark:bg-slate-800/30 backdrop-blur-sm rounded-2xl p-8 border border-slate-300 dark:border-slate-700 hover:border-accent transition-all duration-300 hover:transform hover:scale-105"
+            >
+              <div class="flex items-center justify-between mb-6">
+                <h3 class="text-2xl font-bold">TypeScript</h3>
+                <i
+                  class="fa-solid fa-code text-4xl text-accent"
+                  aria-hidden="true"
+                ></i>
+              </div>
+              <p class="text-sm font-bold text-accent mb-3">Fundamentals</p>
+              <p class="text-slate-500 dark:text-slate-400">
+                Strengthening TypeScript fundamentals through practice.
+              </p>
+            </div>
+
+            <div
+              class="bg-white dark:bg-slate-800/30 backdrop-blur-sm rounded-2xl p-8 border border-slate-300 dark:border-slate-700 hover:border-primary transition-all duration-300 hover:transform hover:scale-105"
+            >
+              <div class="flex items-center justify-between mb-6">
+                <h3 class="text-2xl font-bold">Tailwind CSS</h3>
+                <i
+                  class="fa-solid fa-wind text-4xl text-primary"
+                  aria-hidden="true"
+                ></i>
+              </div>
+              <p class="text-sm font-bold text-primary mb-3">Frontend toolkit</p>
+              <p class="text-slate-500 dark:text-slate-400">
+                Tailwind CSS, Bootstrap 5, Flexbox, CSS Grid, and responsive design.
+              </p>
+            </div>
+
+            <div
+              class="bg-slate-50 dark:bg-slate-800/30 backdrop-blur-sm rounded-2xl p-8 border border-slate-300 dark:border-slate-700 hover:border-secondary transition-all duration-300 hover:transform hover:scale-105"
+            >
+              <div class="flex items-center justify-between mb-6">
+                <h3 class="text-2xl font-bold">Web development</h3>
+                <i
+                  class="fa-solid fa-code text-4xl text-secondary"
+                  aria-hidden="true"
+                ></i>
+              </div>
+              <p class="text-sm font-bold text-secondary mb-3">Hands-on projects</p>
+              <p class="text-slate-500 dark:text-slate-400">
+                Local Storage, CRUD operations, search, favorites, and form validation.
+              </p>
+            </div>
+
+            <div
+              class="bg-slate-50 dark:bg-slate-800/30 backdrop-blur-sm rounded-2xl p-8 border border-slate-300 dark:border-slate-700 hover:border-accent transition-all duration-300 hover:transform hover:scale-105"
+            >
+              <div class="flex items-center justify-between mb-6">
+                <h3 class="text-2xl font-bold">Developer tools</h3>
+                <i
+                  class="fa-brands fa-git-alt text-4xl text-accent"
+                  aria-hidden="true"
+                ></i>
+              </div>
+              <p class="text-sm font-bold text-accent mb-3">Workflow</p>
+              <p class="text-slate-500 dark:text-slate-400">
+                Git, GitHub, and Visual Studio Code.
+              </p>
+            </div>
+          </div>
+
+          <div class="mt-16 grid grid-cols-2 md:grid-cols-4 gap-6">
+            <div
+              class="text-center p-6 bg-slate-100 dark:bg-slate-800/20 rounded-xl border border-slate-300 dark:border-slate-700"
+            >
+              <i class="fa-brands fa-html5 text-5xl text-orange-500 mb-3"></i>
+              <p class="text-slate-600 dark:text-slate-300 font-medium">
+                HTML5
+              </p>
+            </div>
+            <div
+              class="text-center p-6 bg-slate-100 dark:bg-slate-800/20 rounded-xl border border-slate-300 dark:border-slate-700"
+            >
+              <i class="fa-brands fa-css3-alt text-5xl text-blue-500 mb-3"></i>
+              <p class="text-slate-600 dark:text-slate-300 font-medium">CSS3</p>
+            </div>
+            <div
+              class="text-center p-6 bg-slate-100 dark:bg-slate-800/20 rounded-xl border border-slate-300 dark:border-slate-700"
+            >
+              <i class="fa-brands fa-js text-5xl text-yellow-400 mb-3"></i>
+              <p class="text-slate-600 dark:text-slate-300 font-medium">
+                JavaScript
+              </p>
+            </div>
+            <div
+              class="text-center p-6 bg-slate-100 dark:bg-slate-800/20 rounded-xl border border-slate-300 dark:border-slate-700"
+            >
+              <i class="fa-brands fa-git-alt text-5xl text-red-500 mb-3"></i>
+              <p class="text-slate-600 dark:text-slate-300 font-medium">Git</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section
+        id="portfolio"
+        class="py-24 px-4 md:px-8 bg-white dark:bg-slate-900/50 relative overflow-hidden"
+        aria-labelledby="portfolio-title"
+      >
+        <div
+          class="absolute top-1/4 left-1/4 w-96 h-96 bg-primary rounded-full filter blur-3xl opacity-10"
+        ></div>
+        <div class="container mx-auto max-w-7xl relative z-10">
+          <div class="text-center mb-16">
+            <span class="text-primary text-lg font-medium mb-3 block"
+              >Selected work</span
+            >
+            <h2 id="portfolio-title" class="text-5xl font-black mb-4">
+              My
+              <span
+                class="bg-linear-to-r from-primary to-secondary bg-clip-text text-transparent"
+                >projects</span
+              >
+            </h2>
+            <div
+              class="w-24 h-1.5 bg-linear-to-r from-primary to-secondary mx-auto rounded-full"
+            ></div>
+          </div>
+
+          <div
+            class="flex justify-center gap-4 mb-12 flex-wrap"
+            id="portfolio-filters"
+            role="group"
+            aria-label="Filter projects"
+          >
+            <button
+              class="portfolio-filter active px-8 py-3 rounded-xl bg-linear-to-r from-primary to-secondary text-white font-bold transition-all duration-300 hover:shadow-lg hover:shadow-primary/50"
+              data-filter="all"
+              aria-pressed="true"
+              type="button"
+            >
+              All
+            </button>
+            <button
+              class="portfolio-filter px-8 py-3 rounded-xl bg-white dark:bg-slate-800 text-slate-600 dark:text-slate-300 font-bold transition-all duration-300 hover:bg-slate-100 dark:hover:bg-slate-700 border border-slate-300 dark:border-slate-700"
+              data-filter="web"
+              aria-pressed="false"
+              type="button"
+            >
+              Web
+            </button>
+            <button
+              class="portfolio-filter px-8 py-3 rounded-xl bg-white dark:bg-slate-800 text-slate-600 dark:text-slate-300 font-bold transition-all duration-300 hover:bg-slate-100 dark:hover:bg-slate-700 border border-slate-300 dark:border-slate-700"
+              data-filter="app"
+              aria-pressed="false"
+              type="button"
+            >
+              Apps
+            </button>
+          </div>
+
+          <div
+            class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+            id="portfolio-grid"
+          >
+            <div
+              class="portfolio-item group relative bg-slate-50 dark:bg-slate-800 rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-700 hover:border-primary transition-all duration-300"
+              data-category="app"
+            >
+              <div class="relative h-72 overflow-hidden">
+                <img
+                  class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                  loading="lazy"
+                  decoding="async"
+                  src="./assets/imgs/portfolio-1-BqicZ04C.webp"
+                  alt=""
+                />
+                <div
+                  class="absolute inset-0 bg-linear-to-t from-slate-900 via-slate-900/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                ></div>
+              </div>
+              <div class="p-6">
+                <div class="flex items-center justify-between mb-3">
+                  <span
+                    class="px-4 py-1 bg-primary/20 text-primary rounded-full text-sm font-medium"
+                    >Web app</span
+                  >
+                  <div class="flex gap-2">
+                    <a
+                      href="https://github.com/omarmustafa62/Contact-Hub-Contact-Manager"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="w-10 h-10 bg-slate-200 dark:bg-slate-700 rounded-lg flex items-center justify-center hover:bg-primary transition-colors duration-300 group"
+                      aria-label="View project on GitHub"
+                    >
+                      <i
+                        class="fa-solid fa-eye text-slate-600 dark:text-white group-hover:dark:text-white hover:text-white"
+                        aria-hidden="true"
+                      ></i>
+                    </a>
+                    <a
+                      href="https://github.com/omarmustafa62/Contact-Hub-Contact-Manager"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="w-10 h-10 bg-slate-200 dark:bg-slate-700 rounded-lg flex items-center justify-center hover:bg-primary transition-colors duration-300 group"
+                      aria-label="Project source code on GitHub"
+                    >
+                      <i
+                        class="fa-brands fa-github text-slate-600 dark:text-white group-hover:dark:text-white hover:text-white"
+                        aria-hidden="true"
+                      ></i>
+                    </a>
+                  </div>
+                </div>
+                <h3 class="text-2xl font-bold mb-2">Contact Hub – Contact Manager</h3>
+                <p class="text-slate-500 dark:text-slate-400 mb-4">
+                  A contact manager with CRUD, search, favorites, emergency contacts, and persistent Local Storage data.
+                </p>
+                <div class="flex flex-wrap gap-2">
+                  <span
+                    class="px-3 py-1 bg-slate-100 dark:bg-slate-700 rounded-lg text-xs"
+                    >JavaScript</span
+                  >
+                  <span
+                    class="px-3 py-1 bg-slate-100 dark:bg-slate-700 rounded-lg text-xs"
+                    >HTML</span
+                  >
+                  <span
+                    class="px-3 py-1 bg-slate-100 dark:bg-slate-700 rounded-lg text-xs"
+                    >CSS • Local Storage</span
+                  >
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="portfolio-item group relative bg-white dark:bg-slate-800 rounded-2xl overflow-hidden border border-slate-300 dark:border-slate-700 hover:border-secondary transition-all duration-300"
+              data-category="app"
+            >
+              <div class="relative h-72 overflow-hidden">
+                <img
+                  class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                  loading="lazy"
+                  decoding="async"
+                  src="./assets/imgs/portfolio-2-D0_acfF_.webp"
+                  alt=""
+                />
+                <div
+                  class="absolute inset-0 bg-linear-to-t from-slate-900 via-slate-900/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                ></div>
+              </div>
+              <div class="p-6">
+                <div class="flex items-center justify-between mb-3">
+                  <span
+                    class="px-4 py-1 bg-secondary/20 text-secondary rounded-full text-sm font-medium"
+                    >Web app</span
+                  >
+                  <div class="flex space-x-2">
+                    <a
+                      href="https://github.com/omarmustafa62/Whats-For-Dinner-Recipe-App"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="w-10 h-10 bg-slate-200 dark:bg-slate-700 rounded-lg flex items-center justify-center hover:bg-secondary transition-colors duration-300 group"
+                      aria-label="View project on GitHub"
+                    >
+                      <i
+                        class="fa-solid fa-eye text-slate-600 dark:text-white group-hover:dark:text-white hover:text-white"
+                        aria-hidden="true"
+                      ></i>
+                    </a>
+                    <a
+                      href="https://github.com/omarmustafa62/Whats-For-Dinner-Recipe-App"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="w-10 h-10 bg-slate-200 dark:bg-slate-700 rounded-lg flex items-center justify-center hover:bg-secondary transition-colors duration-300 group"
+                      aria-label="Project source code on GitHub"
+                    >
+                      <i
+                        class="fa-brands fa-github text-slate-600 dark:text-white group-hover:dark:text-white hover:text-white"
+                        aria-hidden="true"
+                      ></i>
+                    </a>
+                  </div>
+                </div>
+                <h3 class="text-2xl font-bold mb-2">What's For Dinner – Recipe App</h3>
+                <p class="text-slate-500 dark:text-slate-400 mb-4">
+                  A recipe discovery app that fetches meals from a REST API and displays their details, ingredients, and cooking instructions.
+                </p>
+                <div class="flex flex-wrap gap-2">
+                  <span
+                    class="px-3 py-1 bg-slate-100 dark:bg-slate-700 rounded-lg text-xs"
+                    >JavaScript</span
+                  >
+                  <span
+                    class="px-3 py-1 bg-slate-100 dark:bg-slate-700 rounded-lg text-xs"
+                    >REST API</span
+                  >
+                  <span
+                    class="px-3 py-1 bg-slate-100 dark:bg-slate-700 rounded-lg text-xs"
+                    >HTML • CSS</span
+                  >
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="portfolio-item group relative bg-white dark:bg-slate-800 rounded-2xl overflow-hidden border border-slate-300 dark:border-slate-700 hover:border-accent transition-all duration-300"
+              data-category="app"
+            >
+              <div class="relative h-72 overflow-hidden">
+                <img
+                  class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                  loading="lazy"
+                  decoding="async"
+                  src="./assets/imgs/portfolio-3-uJsBXCgl.webp"
+                  alt=""
+                />
+                <div
+                  class="absolute inset-0 bg-linear-to-t from-slate-900 via-slate-900/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                ></div>
+              </div>
+              <div class="p-6">
+                <div class="flex items-center justify-between mb-3">
+                  <span
+                    class="px-4 py-1 bg-accent/20 text-accent rounded-full text-sm font-medium"
+                    >Web app</span
+                  >
+                  <div class="flex space-x-2">
+                    <a
+                      href="https://github.com/omarmustafa62/Cosmos-Space-Dashboard"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="w-10 h-10 bg-slate-200 dark:bg-slate-700 rounded-lg flex items-center justify-center hover:bg-accent transition-colors duration-300 group"
+                      aria-label="View project on GitHub"
+                    >
+                      <i
+                        class="fa-solid fa-eye text-slate-600 dark:text-white group-hover:dark:text-white hover:text-white"
+                        aria-hidden="true"
+                      ></i>
+                    </a>
+                    <a
+                      href="https://github.com/omarmustafa62/Cosmos-Space-Dashboard"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="w-10 h-10 bg-slate-200 dark:bg-slate-700 rounded-lg flex items-center justify-center hover:bg-accent transition-colors duration-300 group"
+                      aria-label="Project source code on GitHub"
+                    >
+                      <i
+                        class="fa-brands fa-figma text-slate-600 dark:text-white group-hover:dark:text-white hover:text-white"
+                        aria-hidden="true"
+                      ></i>
+                    </a>
+                  </div>
+                </div>
+                <h3 class="text-2xl font-bold mb-2">Cosmos Space Dashboard</h3>
+                <p class="text-slate-500 dark:text-slate-400 mb-4">
+                  A space-themed dashboard that displays external API data using asynchronous JavaScript and interactive UI elements.
+                </p>
+                <div class="flex flex-wrap gap-2">
+                  <span
+                    class="px-3 py-1 bg-slate-100 dark:bg-slate-700 rounded-lg text-xs"
+                    >JavaScript</span
+                  >
+                  <span
+                    class="px-3 py-1 bg-slate-100 dark:bg-slate-700 rounded-lg text-xs"
+                    >REST API</span
+                  >
+                  <span
+                    class="px-3 py-1 bg-slate-100 dark:bg-slate-700 rounded-lg text-xs"
+                    >HTML • CSS</span
+                  >
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="portfolio-item group relative bg-white dark:bg-slate-800 rounded-2xl overflow-hidden border border-slate-300 dark:border-slate-700 hover:border-primary transition-all duration-300"
+              data-category="app"
+            >
+              <div class="relative h-72 overflow-hidden">
+                <img
+                  class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                  loading="lazy"
+                  decoding="async"
+                  src="./assets/imgs/portfolio-4-Czusdp5K.webp"
+                  alt=""
+                />
+                <div
+                  class="absolute inset-0 bg-linear-to-t from-slate-900 via-slate-900/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                ></div>
+              </div>
+              <div class="p-6">
+                <div class="flex items-center justify-between mb-3">
+                  <span
+                    class="px-4 py-1 bg-primary/20 text-primary rounded-full text-sm font-medium"
+                    >Web app</span
+                  >
+                  <div class="flex space-x-2">
+                    <a
+                      href="https://github.com/omarmustafa62/Muddabir-Finance-Dashboard"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="w-10 h-10 bg-slate-200 dark:bg-slate-700 rounded-lg flex items-center justify-center hover:bg-primary transition-colors duration-300 group"
+                      aria-label="View project on GitHub"
+                    >
+                      <i
+                        class="fa-solid fa-eye text-slate-600 dark:text-white group-hover:dark:text-white hover:text-white"
+                        aria-hidden="true"
+                      ></i>
+                    </a>
+                    <a
+                      href="https://github.com/omarmustafa62/Muddabir-Finance-Dashboard"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="w-10 h-10 bg-slate-200 dark:bg-slate-700 rounded-lg flex items-center justify-center hover:bg-primary transition-colors duration-300 group"
+                      aria-label="Project source code on GitHub"
+                    >
+                      <i
+                        class="fa-brands fa-github text-slate-600 dark:text-white group-hover:dark:text-white hover:text-white"
+                        aria-hidden="true"
+                      ></i>
+                    </a>
+                  </div>
+                </div>
+                <h3 class="text-2xl font-bold mb-2">Muddabir – Finance Dashboard</h3>
+                <p class="text-slate-500 dark:text-slate-400 mb-4">
+                  An Arabic personal finance dashboard with an RTL layout and responsive design.
+                </p>
+                <div class="flex flex-wrap gap-2">
+                  <span
+                    class="px-3 py-1 bg-slate-100 dark:bg-slate-700 rounded-lg text-xs"
+                    >HTML</span
+                  >
+                  <span
+                    class="px-3 py-1 bg-slate-100 dark:bg-slate-700 rounded-lg text-xs"
+                    >CSS</span
+                  >
+                  <span
+                    class="px-3 py-1 bg-slate-100 dark:bg-slate-700 rounded-lg text-xs"
+                    >JavaScript</span
+                  >
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="portfolio-item group relative bg-white dark:bg-slate-800 rounded-2xl overflow-hidden border border-slate-300 dark:border-slate-700 hover:border-secondary transition-all duration-300"
+              data-category="web"
+            >
+              <div class="relative h-72 overflow-hidden">
+                <img
+                  class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                  loading="lazy"
+                  decoding="async"
+                  src="./assets/imgs/portfolio-5-ChqqtI-W.webp"
+                  alt=""
+                />
+                <div
+                  class="absolute inset-0 bg-linear-to-t from-slate-900 via-slate-900/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                ></div>
+              </div>
+              <div class="p-6">
+                <div class="flex items-center justify-between mb-3">
+                  <span
+                    class="px-4 py-1 bg-secondary/20 text-secondary rounded-full text-sm font-medium"
+                    >Website</span
+                  >
+                  <div class="flex space-x-2">
+                    <a
+                      href="https://github.com/omarmustafa62/Omar-Mustafa-Portfolio"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="w-10 h-10 bg-slate-200 dark:bg-slate-700 rounded-lg flex items-center justify-center hover:bg-secondary transition-colors duration-300 group"
+                      aria-label="View project on GitHub"
+                    >
+                      <i
+                        class="fa-solid fa-eye text-slate-600 dark:text-white group-hover:dark:text-white hover:text-white"
+                        aria-hidden="true"
+                      ></i>
+                    </a>
+                    <a
+                      href="https://github.com/omarmustafa62/Omar-Mustafa-Portfolio"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="w-10 h-10 bg-slate-200 dark:bg-slate-700 rounded-lg flex items-center justify-center hover:bg-secondary transition-colors duration-300 group"
+                      aria-label="Project source code on GitHub"
+                    >
+                      <i
+                        class="fa-brands fa-github text-slate-600 dark:text-white group-hover:dark:text-white hover:text-white"
+                        aria-hidden="true"
+                      ></i>
+                    </a>
+                  </div>
+                </div>
+                <h3 class="text-2xl font-bold mb-2">Personal Portfolio Website</h3>
+                <p class="text-slate-500 dark:text-slate-400 mb-4">
+                  A personal website showcasing frontend projects, technical skills, and contact information.
+                </p>
+                <div class="flex flex-wrap gap-2">
+                  <span
+                    class="px-3 py-1 bg-slate-100 dark:bg-slate-700 rounded-lg text-xs"
+                    >HTML</span
+                  >
+                  <span
+                    class="px-3 py-1 bg-slate-100 dark:bg-slate-700 rounded-lg text-xs"
+                    >Tailwind CSS</span
+                  >
+                  <span
+                    class="px-3 py-1 bg-slate-100 dark:bg-slate-700 rounded-lg text-xs"
+                    >JavaScript</span
+                  >
+                </div>
+              </div>
+            </div>
+
+            <!-- The remaining template projects are omitted because they are not in the CV. -->
+            <!--
+            <div
+              class="portfolio-item group relative bg-white dark:bg-slate-800 rounded-2xl overflow-hidden border border-slate-300 dark:border-slate-700 hover:border-accent transition-all duration-300"
+              data-category="ecommerce"
+            >
+              <div class="relative h-72 overflow-hidden">
+                <img
+                  class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                  loading="lazy"
+                  decoding="async"
+                  src="./assets/imgs/portfolio-6-C9bxzsei.webp"
+                  alt="fashion e-commerce website with luxury product display, elegant design, shopping experience"
+                />
+                <div
+                  class="absolute inset-0 bg-linear-to-t from-slate-900 via-slate-900/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                ></div>
+              </div>
+              <div class="p-6">
+                <div class="flex items-center justify-between mb-3">
+                  <span
+                    class="px-4 py-1 bg-accent/20 text-accent rounded-full text-sm font-medium"
+                    >E-commerce</span
+                  >
+                  <div class="flex space-x-2">
+                    <a
+                      href="#"
+                      class="w-10 h-10 bg-slate-200 dark:bg-slate-700 rounded-lg flex items-center justify-center hover:bg-accent transition-colors duration-300 group"
+                      aria-label="Preview project"
+                    >
+                      <i
+                        class="fa-solid fa-eye text-slate-600 dark:text-white group-hover:dark:text-white hover:text-white"
+                        aria-hidden="true"
+                      ></i>
+                    </a>
+                    <a
+                      href="#"
+                      class="w-10 h-10 bg-slate-200 dark:bg-slate-700 rounded-lg flex items-center justify-center hover:bg-accent transition-colors duration-300 group"
+                      aria-label="Project source code on GitHub"
+                    >
+                      <i
+                        class="fa-brands fa-github text-slate-600 dark:text-white group-hover:dark:text-white hover:text-white"
+                        aria-hidden="true"
+                      ></i>
+                    </a>
+                  </div>
+                </div>
+                <h3 class="text-2xl font-bold mb-2">Luxury Fashion Store</h3>
+                <p class="text-slate-500 dark:text-slate-400 mb-4">
+                  A premium fashion shopping experience with an elegant interface.
+                </p>
+                <div class="flex flex-wrap gap-2">
+                  <span
+                    class="px-3 py-1 bg-slate-100 dark:bg-slate-700 rounded-lg text-xs"
+                    >Next.js</span
+                  >
+                  <span
+                    class="px-3 py-1 bg-slate-100 dark:bg-slate-700 rounded-lg text-xs"
+                    >Stripe</span
+                  >
+                  <span
+                    class="px-3 py-1 bg-slate-100 dark:bg-slate-700 rounded-lg text-xs"
+                    >Sanity</span
+                  >
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="portfolio-item group relative bg-white dark:bg-slate-800 rounded-2xl overflow-hidden border border-slate-300 dark:border-slate-700 hover:border-primary transition-all duration-300"
+              data-category="web"
+            >
+              <div class="relative h-72 overflow-hidden">
+                <img
+                  class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                  loading="lazy"
+                  decoding="async"
+                  src="./assets/imgs/portfolio-7-BXDNVwGk.webp"
+                  alt="restaurant website with food menu, online ordering system, appetizing food photography"
+                />
+                <div
+                  class="absolute inset-0 bg-linear-to-t from-slate-900 via-slate-900/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                ></div>
+              </div>
+              <div class="p-6">
+                <div class="flex items-center justify-between mb-3">
+                  <span
+                    class="px-4 py-1 bg-primary/20 text-primary rounded-full text-sm font-medium"
+                    >Website</span
+                  >
+                  <div class="flex space-x-2">
+                    <a
+                      href="#"
+                      class="w-10 h-10 bg-slate-200 dark:bg-slate-700 rounded-lg flex items-center justify-center hover:bg-primary transition-colors duration-300 group"
+                      aria-label="Preview project"
+                    >
+                      <i
+                        class="fa-solid fa-eye text-slate-600 dark:text-white group-hover:dark:text-white hover:text-white"
+                        aria-hidden="true"
+                      ></i>
+                    </a>
+                    <a
+                      href="#"
+                      class="w-10 h-10 bg-slate-200 dark:bg-slate-700 rounded-lg flex items-center justify-center hover:bg-primary transition-colors duration-300 group"
+                      aria-label="Project source code on GitHub"
+                    >
+                      <i
+                        class="fa-brands fa-github text-slate-600 dark:text-white group-hover:dark:text-white hover:text-white"
+                        aria-hidden="true"
+                      ></i>
+                    </a>
+                  </div>
+                </div>
+                <h3 class="text-2xl font-bold mb-2">Restaurant & Delivery Website</h3>
+                <p class="text-slate-500 dark:text-slate-400 mb-4">
+                  A food ordering website with delivery and order tracking.
+                </p>
+                <div class="flex flex-wrap gap-2">
+                  <span
+                    class="px-3 py-1 bg-slate-100 dark:bg-slate-700 rounded-lg text-xs"
+                    >React</span
+                  >
+                  <span
+                    class="px-3 py-1 bg-slate-100 dark:bg-slate-700 rounded-lg text-xs"
+                    >Express</span
+                  >
+                  <span
+                    class="px-3 py-1 bg-slate-100 dark:bg-slate-700 rounded-lg text-xs"
+                    >PostgreSQL</span
+                  >
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="portfolio-item group relative bg-white dark:bg-slate-800 rounded-2xl overflow-hidden border border-slate-300 dark:border-slate-700 hover:border-secondary transition-all duration-300"
+              data-category="app"
+            >
+              <div class="relative h-72 overflow-hidden">
+                <img
+                  class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                  loading="lazy"
+                  decoding="async"
+                  src="./assets/imgs/portfolio-8-BnHB_F_a.webp"
+                  alt="fitness tracking app interface with workout plans, progress charts, health metrics dashboard"
+                />
+                <div
+                  class="absolute inset-0 bg-linear-to-t from-slate-900 via-slate-900/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                ></div>
+              </div>
+              <div class="p-6">
+                <div class="flex items-center justify-between mb-3">
+                  <span
+                    class="px-4 py-1 bg-secondary/20 text-secondary rounded-full text-sm font-medium"
+                    >App</span
+                  >
+                  <div class="flex space-x-2">
+                    <a
+                      href="#"
+                      class="w-10 h-10 bg-slate-200 dark:bg-slate-700 rounded-lg flex items-center justify-center hover:bg-secondary transition-colors duration-300 group"
+                      aria-label="Preview project"
+                    >
+                      <i
+                        class="fa-solid fa-eye text-slate-600 dark:text-white group-hover:dark:text-white hover:text-white"
+                        aria-hidden="true"
+                      ></i>
+                    </a>
+                    <a
+                      href="#"
+                      class="w-10 h-10 bg-slate-200 dark:bg-slate-700 rounded-lg flex items-center justify-center hover:bg-secondary transition-colors duration-300 group"
+                      aria-label="Project source code on GitHub"
+                    >
+                      <i
+                        class="fa-brands fa-github text-slate-600 dark:text-white group-hover:dark:text-white hover:text-white"
+                        aria-hidden="true"
+                      ></i>
+                    </a>
+                  </div>
+                </div>
+                <h3 class="text-2xl font-bold mb-2">Fitness Tracking App</h3>
+                <p class="text-slate-500 dark:text-slate-400 mb-4">
+                  An app for tracking workouts, nutrition, and fitness progress.
+                </p>
+                <div class="flex flex-wrap gap-2">
+                  <span
+                    class="px-3 py-1 bg-slate-100 dark:bg-slate-700 rounded-lg text-xs"
+                    >React Native</span
+                  >
+                  <span
+                    class="px-3 py-1 bg-slate-100 dark:bg-slate-700 rounded-lg text-xs"
+                    >Redux</span
+                  >
+                  <span
+                    class="px-3 py-1 bg-slate-100 dark:bg-slate-700 rounded-lg text-xs"
+                    >Firebase</span
+                  >
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="portfolio-item group relative bg-white dark:bg-slate-800 rounded-2xl overflow-hidden border border-slate-300 dark:border-slate-700 hover:border-accent transition-all duration-300"
+              data-category="design"
+            >
+              <div class="relative h-72 overflow-hidden">
+                <img
+                  class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                  loading="lazy"
+                  decoding="async"
+                  src="./assets/imgs/portfolio-9-Q6q-wpwU.webp"
+                  alt="mobile app ui design mockup with colorful screens, modern interface, user experience showcase"
+                />
+                <div
+                  class="absolute inset-0 bg-linear-to-t from-slate-900 via-slate-900/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                ></div>
+              </div>
+              <div class="p-6">
+                <div class="flex items-center justify-between mb-3">
+                  <span
+                    class="px-4 py-1 bg-accent/20 text-accent rounded-full text-sm font-medium"
+                    >Design</span
+                  >
+                  <div class="flex space-x-2">
+                    <a
+                      href="#"
+                      class="w-10 h-10 bg-slate-200 dark:bg-slate-700 rounded-lg flex items-center justify-center hover:bg-accent transition-colors duration-300 group"
+                      aria-label="Preview project"
+                    >
+                      <i
+                        class="fa-solid fa-eye text-slate-600 dark:text-white group-hover:dark:text-white hover:text-white"
+                        aria-hidden="true"
+                      ></i>
+                    </a>
+                    <a
+                      href="#"
+                      class="w-10 h-10 bg-slate-200 dark:bg-slate-700 rounded-lg flex items-center justify-center hover:bg-accent transition-colors duration-300 group"
+                      aria-label="Project design on Figma"
+                    >
+                      <i
+                        class="fa-brands fa-figma text-slate-600 dark:text-white group-hover:dark:text-white hover:text-white"
+                        aria-hidden="true"
+                      ></i>
+                    </a>
+                  </div>
+                </div>
+                <h3 class="text-2xl font-bold mb-2">Mobile App UI Design</h3>
+                <p class="text-slate-500 dark:text-slate-400 mb-4">
+                  A complete UI/UX concept for a multi-purpose mobile app.
+                </p>
+                <div class="flex flex-wrap gap-2">
+                  <span
+                    class="px-3 py-1 bg-slate-100 dark:bg-slate-700 rounded-lg text-xs"
+                    >Figma</span
+                  >
+                  <span
+                    class="px-3 py-1 bg-slate-100 dark:bg-slate-700 rounded-lg text-xs"
+                    >Adobe XD</span
+                  >
+                  <span
+                    class="px-3 py-1 bg-slate-100 dark:bg-slate-700 rounded-lg text-xs"
+                    >Sketch</span
+                  >
+                </div>
+              </div>
+            </div>
+            -->
+          </div>
+
+          <div class="text-center mt-16">
+            <a
+              href="#contact"
+              class="inline-block bg-linear-to-r from-primary to-secondary px-12 py-4 rounded-xl text-lg font-bold text-white hover:-translate-y-1 transition-all duration-300"
+            >
+              <i class="fa-solid fa-rocket me-2"></i>
+              Let's connect
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section
+        id="experience"
+        class="experience-section py-24 px-4 md:px-8 bg-slate-50 dark:bg-transparent relative overflow-hidden"
+        aria-labelledby="experience-title"
+      >
+        <div
+          class="absolute top-1/3 right-1/4 w-96 h-96 bg-secondary rounded-full filter blur-3xl opacity-10"
+        ></div>
+        <div class="container mx-auto max-w-7xl relative z-10">
+          <div class="text-center mb-16">
+            <span class="text-secondary text-lg font-medium mb-3 block"
+              >Education & training</span
+            >
+            <h2 id="experience-title" class="text-5xl font-black mb-4">
+              My
+              <span
+                class="bg-linear-to-r from-secondary to-accent bg-clip-text text-transparent"
+                >learning journey</span
+              >
+            </h2>
+            <div
+              class="w-24 h-1.5 bg-linear-to-r from-secondary to-accent mx-auto rounded-full"
+            ></div>
+          </div>
+
+          <div class="relative">
+            <div
+              class="absolute right-1/2 transform translate-x-1/2 h-full w-1 bg-linear-to-b from-primary via-secondary to-accent"
+            ></div>
+
+            <div class="space-y-12">
+              <div class="relative flex items-center" id="experience-1">
+                <div class="w-1/2 pl-8 text-right">
+                  <div
+                    class="timeline-card-left bg-white dark:bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-slate-200 dark:border-slate-700 hover:border-primary transition-all duration-300 transform"
+                  >
+                    <div class="flex items-center justify-between mb-4">
+                      <span
+                        class="px-4 py-2 bg-primary/20 text-primary rounded-lg text-sm font-bold"
+                        >2024</span
+                      >
+                      <i
+                        class="fa-solid fa-briefcase text-3xl text-primary"
+                      ></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-2">
+                      HICMIS graduate
+                    </h3>
+                    <p class="text-xl text-secondary mb-3">
+                      High Institute of Computer and Management Information Systems (HICMIS)
+                    </p>
+                    <p
+                      class="text-slate-600 dark:text-slate-400 leading-relaxed mb-4"
+                    >
+                      Graduated from the High Institute of Computer and Management Information Systems in 2024.
+                    </p>
+                    <div class="flex flex-wrap gap-2">
+                      <span
+                        class="px-3 py-1 bg-slate-100 dark:bg-slate-700 rounded-lg text-xs"
+                        >HICMIS</span
+                      >
+                      <span
+                        class="px-3 py-1 bg-slate-100 dark:bg-slate-700 rounded-lg text-xs"
+                        >Graduate, 2024</span
+                      >
+                      <span
+                        class="px-3 py-1 bg-slate-100 dark:bg-slate-700 rounded-lg text-xs"
+                      >
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="absolute right-1/2 transform translate-x-1/2 w-6 h-6 bg-primary rounded-full border-4 border-white dark:border-slate-950 z-10"
+                ></div>
+                <div class="w-1/2 pl-16"></div>
+              </div>
+
+              <div class="relative flex items-center" id="experience-2">
+                <div class="w-1/2 pr-8"></div>
+                <div
+                  class="absolute right-1/2 transform translate-x-1/2 w-6 h-6 bg-secondary rounded-full border-4 border-white dark:border-slate-950 z-10"
+                ></div>
+                <div class="w-1/2 pr-8 text-right">
+                  <div
+                    class="timeline-card-right bg-white dark:bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-slate-200 dark:border-slate-700 hover:border-secondary transition-all duration-300 transform"
+                  >
+                    <div class="flex items-center justify-between mb-4">
+                      <i
+                        class="fa-solid fa-laptop-code text-3xl text-secondary"
+                      ></i>
+                      <span
+                        class="px-4 py-2 bg-secondary/20 text-secondary rounded-lg text-sm font-bold"
+                        >2026</span
+                      >
+                    </div>
+                    <h3 class="text-2xl font-bold mb-2">Frontend Development Training</h3>
+                    <p class="text-xl text-secondary mb-3">
+                      Route Academy
+                    </p>
+                    <p
+                      class="text-slate-600 dark:text-slate-400 leading-relaxed mb-4"
+                    >
+                      Professional frontend development training, with practical projects to apply web fundamentals and build my skills.
+                    </p>
+                    <div class="flex flex-wrap gap-2 justify-end">
+                      <span
+                        class="px-3 py-1 bg-slate-100 dark:bg-slate-700 rounded-lg text-xs"
+                        >Frontend Development</span
+                      >
+                      <span
+                        class="px-3 py-1 bg-slate-100 dark:bg-slate-700 rounded-lg text-xs"
+                        >Professional training</span
+                      >
+                      <span
+                        class="px-3 py-1 bg-slate-100 dark:bg-slate-700 rounded-lg text-xs"
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="relative flex items-center" id="experience-3">
+                <div class="w-1/2 pl-8 text-right">
+                  <div
+                    class="timeline-card-left bg-white/60 dark:bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-slate-300 dark:border-slate-700 hover:border-accent transition-all duration-300 transform"
+                  >
+                    <div class="flex items-center justify-between mb-4">
+                      <span
+                        class="px-4 py-2 bg-accent/20 text-accent rounded-lg text-sm font-bold"
+                        >Currently learning</span
+                      >
+                      <i class="fa-solid fa-code text-3xl text-accent"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-2">React.js</h3>
+                    <p class="text-xl text-accent mb-3">Skills in practice</p>
+                    <p
+                      class="text-slate-600 dark:text-slate-400 leading-relaxed mb-4"
+                    >
+                      Currently developing my React.js skills through hands-on practice and projects.
+                    </p>
+                    <div class="flex flex-wrap gap-2">
+                      <span
+                        class="px-3 py-1 bg-slate-100 dark:bg-slate-700 rounded-lg text-xs"
+                        >React.js</span
+                      >
+                      <span
+                        class="px-3 py-1 bg-slate-100 dark:bg-slate-700 rounded-lg text-xs"
+                      >
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="absolute right-1/2 transform translate-x-1/2 w-6 h-6 bg-accent rounded-full border-4 border-white dark:border-slate-950 z-10"
+                ></div>
+                <div class="w-1/2 pl-16"></div>
+              </div>
+
+              <div class="relative flex items-center" id="experience-4">
+                <div class="w-1/2 pl-8"></div>
+                <div
+                  class="absolute right-1/2 transform translate-x-1/2 w-6 h-6 bg-primary rounded-full border-4 border-white dark:border-slate-950 z-10"
+                ></div>
+                <div class="w-1/2 pr-8 text-right">
+                  <div
+                    class="timeline-card-right bg-white/60 dark:bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-slate-300 dark:border-slate-700 hover:border-primary transition-all duration-300 transform"
+                  >
+                    <div class="flex items-center justify-between mb-4">
+                      <i
+                        class="fa-solid fa-graduation-cap text-3xl text-primary"
+                      ></i>
+                      <span
+                        class="px-4 py-2 bg-primary/20 text-primary rounded-lg text-sm font-bold"
+                        >Fundamentals</span
+                      >
+                    </div>
+                    <h3 class="text-2xl font-bold mb-2">TypeScript</h3>
+                    <p class="text-xl text-primary mb-3">
+                      Developing the fundamentals
+                    </p>
+                    <p
+                      class="text-slate-600 dark:text-slate-400 leading-relaxed mb-4"
+                    >
+                      Strengthening my TypeScript fundamentals as I continue learning frontend development.
+                    </p>
+                    <div class="flex flex-wrap gap-2 justify-end">
+                      <span
+                        class="px-3 py-1 bg-slate-100 dark:bg-slate-700 rounded-lg text-xs"
+                        >TypeScript Fundamentals</span
+                      >
+                      <span
+                        class="px-3 py-1 bg-slate-100 dark:bg-slate-700 rounded-lg text-xs"
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="mt-20 grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div
+              class="bg-slate-50 dark:bg-slate-800/30 backdrop-blur-sm rounded-2xl p-8 border border-slate-300 dark:border-slate-700 text-center"
+            >
+              <div
+                class="w-16 h-16 bg-linear-to-br from-primary to-secondary rounded-2xl flex items-center justify-center mx-auto mb-4"
+              >
+                <i class="fa-solid fa-award text-3xl text-white"></i>
+              </div>
+              <h3 class="text-2xl font-bold mb-2">Languages</h3>
+              <p class="text-slate-500 dark:text-slate-400">
+                Arabic: Native<br />English: B2 – Upper-Intermediate
+              </p>
+            </div>
+            <div
+              class="bg-slate-50 dark:bg-slate-800/30 backdrop-blur-sm rounded-2xl p-8 border border-slate-300 dark:border-slate-700 text-center"
+            >
+              <div
+                class="w-16 h-16 bg-linear-to-br from-secondary to-accent rounded-2xl flex items-center justify-center mx-auto mb-4"
+              >
+                <i class="fa-solid fa-users text-3xl text-white"></i>
+              </div>
+              <h3 class="text-2xl font-bold mb-2">Career goal</h3>
+              <p class="text-slate-500 dark:text-slate-400">
+                Seeking an entry-level role<br />to contribute and grow with a team
+              </p>
+            </div>
+            <div
+              class="bg-slate-50 dark:bg-slate-800/30 backdrop-blur-sm rounded-2xl p-8 border border-slate-300 dark:border-slate-700 text-center"
+            >
+              <div
+                class="w-16 h-16 bg-linear-to-br from-accent to-primary rounded-2xl flex items-center justify-center mx-auto mb-4"
+              >
+                <i class="fa-solid fa-lightbulb text-3xl text-white"></i>
+              </div>
+              <h3 class="text-2xl font-bold mb-2">Continuous learning</h3>
+              <p class="text-slate-500 dark:text-slate-400">
+                Building my skills through<br />training and practical projects
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section
+        id="testimonials"
+        class="py-24 px-4 md:px-8 bg-white dark:bg-slate-900/50 relative overflow-hidden"
+        aria-labelledby="testimonials-title"
+      >
+        <div
+          class="absolute top-0 left-1/3 w-96 h-96 bg-accent rounded-full filter blur-3xl opacity-10"
+        ></div>
+        <div class="container mx-auto max-w-7xl relative z-10">
+          <div class="text-center mb-16">
+            <span class="text-accent text-lg font-medium mb-3 block"
+              >Featured projects</span
+            >
+            <h2 id="testimonials-title" class="text-5xl font-black mb-4">
+              Projects in
+              <span
+                class="bg-linear-to-r from-accent to-primary bg-clip-text text-transparent"
+                >practice</span
+              >
+            </h2>
+            <div
+              class="w-24 h-1.5 bg-linear-to-r from-accent to-primary mx-auto rounded-full"
+            ></div>
+          </div>
+
+          <!-- Testimonials Carousel -->
+          <div class="relative mb-12 px-2 lg:px-8">
+            <!-- Carousel Container -->
+            <div class="overflow-hidden">
+              <div
+                id="testimonials-carousel"
+                class="flex items-stretch transition-transform duration-500 ease-in-out"
+                role="region"
+                aria-label="Featured project highlights"
+                aria-live="polite"
+              >
+                <!-- Card 1 -->
+                <div
+                  class="testimonial-card flex-shrink-0 w-full sm:w-1/2 lg:w-1/3 px-0 lg:px-4 flex flex-col self-stretch"
+                >
+                  <div
+                    class="bg-slate-50 dark:bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-slate-200 dark:border-slate-700 hover:border-accent transition-all duration-300 flex flex-col h-full"
+                  >
+                    <div class="flex items-center mb-6">
+                      <img
+                        src="./assets/imgs/avatar-1-BQH9KX0X.webp"
+                        alt=""
+                        class="hidden"
+                      />
+                      <div>
+                        <h4 class="text-xl font-bold">Contact Hub</h4>
+                        <p class="text-slate-500 dark:text-slate-400">
+                          JavaScript · HTML · CSS · Local Storage
+                        </p>
+                      </div>
+                    </div>
+                    <div
+                      class="flex mb-4"
+                      role="img"
+                      aria-label="Project technologies"
+                    >
+                      <i
+                        class="fa-solid fa-star text-yellow-400"
+                        aria-hidden="true"
+                      ></i>
+                      <i
+                        class="fa-solid fa-star text-yellow-400"
+                        aria-hidden="true"
+                      ></i>
+                      <i
+                        class="fa-solid fa-star text-yellow-400"
+                        aria-hidden="true"
+                      ></i>
+                      <i
+                        class="fa-solid fa-star text-yellow-400"
+                        aria-hidden="true"
+                      ></i>
+                      <i
+                        class="fa-solid fa-star text-yellow-400"
+                        aria-hidden="true"
+                      ></i>
+                    </div>
+                    <p
+                      class="text-slate-600 dark:text-slate-300 leading-relaxed text-lg flex-grow"
+                    >
+                      A contact manager with CRUD operations, search, favorites, emergency contacts, and persistent Local Storage data.
+                    </p>
+                  </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div
+                  class="testimonial-card flex-shrink-0 w-full sm:w-1/2 lg:w-1/3 px-4 flex flex-col self-stretch"
+                >
+                  <div
+                    class="bg-white/80 dark:bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-slate-200 dark:border-slate-700 hover:border-primary transition-all duration-300 flex flex-col h-full"
+                  >
+                    <div class="flex items-center mb-6">
+                      <img
+                        src="./assets/imgs/avatar-2-CyFiVXIH.webp"
+                        alt=""
+                        class="hidden"
+                      />
+                      <div>
+                        <h4 class="text-xl font-bold">What's For Dinner</h4>
+                        <p class="text-slate-500 dark:text-slate-400">
+                          JavaScript · REST API
+                        </p>
+                      </div>
+                    </div>
+                    <div class="flex mb-4">
+                      <i class="fa-solid fa-star text-yellow-400"></i>
+                      <i class="fa-solid fa-star text-yellow-400"></i>
+                      <i class="fa-solid fa-star text-yellow-400"></i>
+                      <i class="fa-solid fa-star text-yellow-400"></i>
+                      <i class="fa-solid fa-star text-yellow-400"></i>
+                    </div>
+                    <p
+                      class="text-slate-600 dark:text-slate-300 leading-relaxed text-lg flex-grow"
+                    >
+                      A recipe discovery app that fetches meals and displays recipes, ingredients, and cooking instructions.
+                    </p>
+                  </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div
+                  class="testimonial-card flex-shrink-0 w-full sm:w-1/2 lg:w-1/3 px-4 flex flex-col self-stretch"
+                >
+                  <div
+                    class="bg-white/80 dark:bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-slate-200 dark:border-slate-700 hover:border-secondary transition-all duration-300 flex flex-col h-full"
+                  >
+                    <div class="flex items-center mb-6">
+                      <img
+                        src="./assets/imgs/avatar-3-CmoFRkys.webp"
+                        alt=""
+                        class="hidden"
+                      />
+                      <div>
+                        <h4 class="text-xl font-bold">Cosmos Space Dashboard</h4>
+                        <p class="text-slate-500 dark:text-slate-400">
+                          JavaScript · REST API
+                        </p>
+                      </div>
+                    </div>
+                    <div
+                      class="flex mb-4"
+                      role="img"
+                      aria-label="Project technologies"
+                    >
+                      <i
+                        class="fa-solid fa-star text-yellow-400"
+                        aria-hidden="true"
+                      ></i>
+                      <i
+                        class="fa-solid fa-star text-yellow-400"
+                        aria-hidden="true"
+                      ></i>
+                      <i
+                        class="fa-solid fa-star text-yellow-400"
+                        aria-hidden="true"
+                      ></i>
+                      <i
+                        class="fa-solid fa-star text-yellow-400"
+                        aria-hidden="true"
+                      ></i>
+                      <i
+                        class="fa-solid fa-star text-yellow-400"
+                        aria-hidden="true"
+                      ></i>
+                    </div>
+                    <p
+                      class="text-slate-600 dark:text-slate-300 leading-relaxed text-lg flex-grow"
+                    >
+                      A space-themed dashboard that displays external API data with asynchronous JavaScript and interactive UI elements.
+                    </p>
+                  </div>
+                </div>
+
+                <!-- Card 4 -->
+                <div
+                  class="testimonial-card flex-shrink-0 w-full sm:w-1/2 lg:w-1/3 px-4 flex flex-col self-stretch"
+                >
+                  <div
+                    class="bg-white/80 dark:bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-slate-200 dark:border-slate-700 hover:border-accent transition-all duration-300 flex flex-col h-full"
+                  >
+                    <div class="flex items-center mb-6">
+                      <img
+                        src="./assets/imgs/avatar-4-CI2X8fvY.webp"
+                        alt=""
+                        class="hidden"
+                      />
+                      <div>
+                        <h4 class="text-xl font-bold">Muddabir</h4>
+                        <p class="text-slate-500 dark:text-slate-400">
+                          HTML · CSS · JavaScript
+                        </p>
+                      </div>
+                    </div>
+                    <div
+                      class="flex mb-4"
+                      role="img"
+                      aria-label="Project technologies"
+                    >
+                      <i
+                        class="fa-solid fa-star text-yellow-400"
+                        aria-hidden="true"
+                      ></i>
+                      <i
+                        class="fa-solid fa-star text-yellow-400"
+                        aria-hidden="true"
+                      ></i>
+                      <i
+                        class="fa-solid fa-star text-yellow-400"
+                        aria-hidden="true"
+                      ></i>
+                      <i
+                        class="fa-solid fa-star text-yellow-400"
+                        aria-hidden="true"
+                      ></i>
+                      <i
+                        class="fa-solid fa-star text-yellow-400"
+                        aria-hidden="true"
+                      ></i>
+                    </div>
+                    <p
+                      class="text-slate-600 dark:text-slate-300 leading-relaxed text-lg flex-grow"
+                    >
+                      An Arabic personal finance dashboard with an RTL layout and responsive design.
+                    </p>
+                  </div>
+                </div>
+
+                <!-- Card 5 -->
+                <div
+                  class="testimonial-card flex-shrink-0 w-full sm:w-1/2 lg:w-1/3 px-4 flex flex-col self-stretch"
+                >
+                  <div
+                    class="bg-white/80 dark:bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-slate-200 dark:border-slate-700 hover:border-primary transition-all duration-300 flex flex-col h-full"
+                  >
+                    <div class="flex items-center mb-6">
+                      <img
+                        src="./assets/imgs/avatar-5-BF_5vAuR.webp"
+                        alt=""
+                        class="hidden"
+                      />
+                      <div>
+                        <h4 class="text-xl font-bold">Personal Portfolio Website</h4>
+                        <p class="text-slate-500 dark:text-slate-400">
+                          HTML · Tailwind CSS · JavaScript
+                        </p>
+                      </div>
+                    </div>
+                    <div
+                      class="flex mb-4"
+                      role="img"
+                      aria-label="Project technologies"
+                    >
+                      <i
+                        class="fa-solid fa-star text-yellow-400"
+                        aria-hidden="true"
+                      ></i>
+                      <i
+                        class="fa-solid fa-star text-yellow-400"
+                        aria-hidden="true"
+                      ></i>
+                      <i
+                        class="fa-solid fa-star text-yellow-400"
+                        aria-hidden="true"
+                      ></i>
+                      <i
+                        class="fa-solid fa-star text-yellow-400"
+                        aria-hidden="true"
+                      ></i>
+                      <i
+                        class="fa-solid fa-star text-yellow-400"
+                        aria-hidden="true"
+                      ></i>
+                    </div>
+                    <p
+                      class="text-slate-600 dark:text-slate-300 leading-relaxed text-lg flex-grow"
+                    >
+                      A personal website showcasing frontend projects, technical skills, and professional contact information.
+                    </p>
+                  </div>
+                </div>
+
+                <!-- Card 6 -->
+                <div
+                  class="testimonial-card flex-shrink-0 w-full sm:w-1/2 lg:w-1/3 px-4 flex flex-col self-stretch"
+                >
+                  <div
+                    class="bg-white/80 dark:bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-slate-200 dark:border-slate-700 hover:border-secondary transition-all duration-300 flex flex-col h-full"
+                  >
+                    <div class="flex items-center mb-6">
+                      <img
+                        src="./assets/imgs/avatar-6-IIG--UcM.webp"
+                        alt=""
+                        class="hidden"
+                      />
+                      <div>
+                        <h4 class="text-xl font-bold">Continuous Learning</h4>
+                        <p class="text-slate-500 dark:text-slate-400">
+                          Route Academy · React.js · TypeScript
+                        </p>
+                      </div>
+                    </div>
+                    <div
+                      class="flex mb-4"
+                      role="img"
+                      aria-label="Learning focus"
+                    >
+                      <i
+                        class="fa-solid fa-star text-yellow-400"
+                        aria-hidden="true"
+                      ></i>
+                      <i
+                        class="fa-solid fa-star text-yellow-400"
+                        aria-hidden="true"
+                      ></i>
+                      <i
+                        class="fa-solid fa-star text-yellow-400"
+                        aria-hidden="true"
+                      ></i>
+                      <i
+                        class="fa-solid fa-star text-yellow-400"
+                        aria-hidden="true"
+                      ></i>
+                      <i
+                        class="fa-solid fa-star text-yellow-400"
+                        aria-hidden="true"
+                      ></i>
+                    </div>
+                    <p
+                      class="text-slate-600 dark:text-slate-300 leading-relaxed text-lg flex-grow"
+                    >
+                      Completed frontend development training and currently developing React.js skills and TypeScript fundamentals.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Navigation Buttons -->
+            <button
+              id="next-testimonial"
+              class="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 bg-white/90 dark:bg-slate-800/90 hover:bg-primary text-slate-900 dark:text-white w-12 h-12 rounded-full hidden md:flex items-center justify-center transition-all duration-300 hover:scale-110 z-10 border border-slate-300 dark:border-slate-700 cursor-pointer"
+              aria-label="Next project"
+              type="button"
+            >
+              <i class="fa-solid fa-chevron-left" aria-hidden="true"></i>
+            </button>
+            <button
+              id="prev-testimonial"
+              class="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 bg-white/90 dark:bg-slate-800/90 hover:bg-primary text-slate-900 dark:text-white w-12 h-12 rounded-full hidden md:flex items-center justify-center transition-all duration-300 hover:scale-110 z-10 border border-slate-300 dark:border-slate-700 cursor-pointer"
+              aria-label="Previous project"
+              type="button"
+            >
+              <i class="fa-solid fa-chevron-right" aria-hidden="true"></i>
+            </button>
+          </div>
+
+          <!-- Carousel Indicators -->
+          <div
+            class="flex justify-center gap-3 mb-12"
+            role="tablist"
+            aria-label="Project indicators"
+          >
+            <button
+              class="carousel-indicator w-3 h-3 rounded-full scale-125 bg-accent transition-all duration-300 hover:scale-125 cursor-pointer"
+              data-index="0"
+              role="tab"
+              aria-label="Project 1"
+              aria-selected="true"
+              type="button"
+            ></button>
+            <button
+              class="carousel-indicator w-3 h-3 rounded-full bg-slate-400 dark:bg-slate-600 transition-all duration-300 hover:scale-125 cursor-pointer"
+              data-index="1"
+              role="tab"
+              aria-label="Project 2"
+              aria-selected="false"
+              type="button"
+            ></button>
+            <button
+              class="carousel-indicator w-3 h-3 rounded-full bg-slate-400 dark:bg-slate-600 transition-all duration-300 hover:scale-125 cursor-pointer"
+              data-index="2"
+              role="tab"
+              aria-label="Project 3"
+              aria-selected="false"
+              type="button"
+            ></button>
+            <button
+              class="carousel-indicator w-3 h-3 rounded-full bg-slate-400 dark:bg-slate-600 transition-all duration-300 hover:scale-125 cursor-pointer"
+              data-index="3"
+              role="tab"
+              aria-label="Project 4"
+              aria-selected="false"
+              type="button"
+            ></button>
+          </div>
+
+          <div
+            class="bg-linear-to-r from-primary via-secondary to-accent p-1 rounded-3xl"
+          >
+            <div
+              class="bg-white dark:bg-slate-900 rounded-3xl p-12 text-center"
+            >
+              <h3 class="text-3xl font-bold mb-4">Let's build something together</h3>
+              <p
+                class="text-xl text-slate-600 dark:text-slate-300 mb-8 max-w-2xl mx-auto"
+              >
+                Explore my projects or get in touch about an entry-level opportunity.
+              </p>
+              <div class="flex justify-center gap-4 flex-wrap">
+                <a
+                  href="#contact"
+                  class="bg-linear-to-r from-primary to-secondary text-white px-10 py-4 rounded-xl font-bold hover:shadow-xl hover:shadow-primary/30 transition-all duration-300"
+                >
+                  Get in touch
+                </a>
+                <a
+                  href="#portfolio"
+                  class="border-2 border-primary dark:border-white text-primary dark:text-white px-10 py-4 rounded-xl font-bold hover:bg-primary hover:text-white dark:hover:bg-white dark:hover:text-slate-900 transition-all duration-300"
+                >
+                  View projects
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section
+        id="statistics-section"
+        class="py-24 px-4 md:px-8 bg-slate-50 dark:bg-transparent relative overflow-hidden"
+      >
+        <div class="container mx-auto max-w-7xl relative z-10">
+          <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+            <div class="text-center">
+              <div
+                class="w-24 h-24 bg-linear-to-br from-primary to-secondary rounded-2xl flex items-center justify-center mx-auto mb-4"
+              >
+                <i class="fa-solid fa-project-diagram text-4xl text-white"></i>
+              </div>
+              <div
+                class="text-5xl font-black bg-linear-to-r from-primary to-secondary bg-clip-text text-transparent mb-2"
+              >
+                5
+              </div>
+              <p class="text-slate-400 text-lg">Featured projects</p>
+            </div>
+            <div class="text-center">
+              <div
+                class="w-24 h-24 bg-linear-to-br from-secondary to-accent rounded-2xl flex items-center justify-center mx-auto mb-4"
+              >
+                <i class="fa-solid fa-users text-4xl text-white"></i>
+              </div>
+              <div
+                class="text-5xl font-black bg-linear-to-r from-secondary to-accent bg-clip-text text-transparent mb-2"
+              >
+                2024
+              </div>
+              <p class="text-slate-400 text-lg">Graduation year</p>
+            </div>
+            <div class="text-center">
+              <div
+                class="w-24 h-24 bg-linear-to-br from-accent to-primary rounded-2xl flex items-center justify-center mx-auto mb-4"
+              >
+                <i class="fa-solid fa-clock text-4xl text-white"></i>
+              </div>
+              <div
+                class="text-5xl font-black bg-linear-to-r from-accent to-primary bg-clip-text text-transparent mb-2"
+              >
+                2026
+              </div>
+              <p class="text-slate-400 text-lg">Training year</p>
+            </div>
+            <div class="text-center">
+              <div
+                class="w-24 h-24 bg-linear-to-br from-primary to-accent rounded-2xl flex items-center justify-center mx-auto mb-4"
+              >
+                <i class="fa-solid fa-trophy text-4xl text-white"></i>
+              </div>
+              <div
+                class="text-5xl font-black bg-linear-to-r from-primary to-accent bg-clip-text text-transparent mb-2"
+              >
+                B2
+              </div>
+              <p class="text-slate-400 text-lg">English proficiency</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section
+        id="contact"
+        class="py-24 px-4 md:px-8 bg-white dark:bg-slate-900/50 relative overflow-hidden"
+        aria-labelledby="contact-title"
+      >
+        <div
+          class="absolute bottom-0 right-1/4 w-96 h-96 bg-primary rounded-full filter blur-3xl opacity-10"
+        ></div>
+        <div class="container mx-auto max-w-7xl relative z-10">
+          <div class="text-center mb-16">
+            <span class="text-primary text-lg font-medium mb-3 block"
+              >Contact</span
+            >
+            <h2 id="contact-title" class="text-5xl font-black mb-4">
+              Let's start a
+              <span
+                class="bg-linear-to-r from-primary to-secondary bg-clip-text text-transparent"
+                >conversation</span
+              >
+            </h2>
+            <div
+              class="w-24 h-1.5 bg-linear-to-r from-primary to-secondary mx-auto rounded-full"
+            ></div>
+            <p
+              class="text-xl text-slate-600 dark:text-slate-300 mt-6 max-w-2xl mx-auto"
+            >
+              Looking for a junior frontend developer? I'd love to hear from you.
+            </p>
+          </div>
+
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+            <div class="space-y-8">
+              <a
+                href="mailto:omarmustafa62dx@gmail.com"
+                class="group block bg-slate-50 dark:bg-slate-800/50 backdrop-blur-sm rounded-2xl p-6 border border-slate-200 dark:border-slate-700 hover:border-primary hover:shadow-lg hover:-translate-y-1 transition-all duration-300"
+              >
+                <div class="flex items-center gap-5">
+                  <div
+                    class="w-16 h-16 bg-gradient-to-br from-primary to-secondary rounded-2xl flex items-center justify-center text-white shadow-lg shadow-primary/30 group-hover:scale-110 transition-transform duration-300 shrink-0"
+                  >
+                    <i class="fa-solid fa-envelope text-3xl"></i>
+                  </div>
+                  <div>
+                    <h3
+                      class="text-lg font-bold text-slate-500 dark:text-slate-400 mb-1"
+                    >
+                      Email
+                    </h3>
+                    <p
+                      class="text-xl font-bold text-slate-800 dark:text-white direction-ltr"
+                      dir="ltr"
+                    >
+                      omarmustafa62dx@gmail.com
+                    </p>
+                    <p class="text-sm text-slate-400 mt-1">
+                      Email is the best way to reach me
+                    </p>
+                  </div>
+                </div>
+              </a>
+
+              <a
+                href="tel:+201092857117"
+                class="group block bg-slate-50 dark:bg-slate-800/50 backdrop-blur-sm rounded-2xl p-6 border border-slate-200 dark:border-slate-700 hover:border-secondary hover:shadow-lg hover:-translate-y-1 transition-all duration-300"
+              >
+                <div class="flex items-center gap-5">
+                  <div
+                    class="w-16 h-16 bg-gradient-to-br from-secondary to-accent rounded-2xl flex items-center justify-center text-white shadow-lg shadow-secondary/30 group-hover:scale-110 transition-transform duration-300 shrink-0"
+                  >
+                    <i class="fa-solid fa-phone text-3xl"></i>
+                  </div>
+                  <div>
+                    <h3
+                      class="text-lg font-bold text-slate-500 dark:text-slate-400 mb-1"
+                    >
+                      Phone
+                    </h3>
+                    <p
+                      class="text-xl font-bold text-slate-800 dark:text-white direction-ltr"
+                      dir="ltr"
+                    >
+                      +20 109 285 7117
+                    </p>
+                    <p class="text-sm text-slate-400 mt-1">
+                      Based in Egypt
+                    </p>
+                  </div>
+                </div>
+              </a>
+
+              <div
+                class="group block bg-slate-50 dark:bg-slate-800/50 backdrop-blur-sm rounded-2xl p-6 border border-slate-200 dark:border-slate-700 hover:border-accent hover:shadow-lg transition-all duration-300"
+              >
+                <div class="flex items-center gap-5">
+                  <div
+                    class="w-16 h-16 bg-gradient-to-br from-accent to-primary rounded-2xl flex items-center justify-center text-white shadow-lg shadow-accent/30 group-hover:scale-110 transition-transform duration-300 shrink-0"
+                  >
+                    <i class="fa-solid fa-location-dot text-3xl"></i>
+                  </div>
+                  <div>
+                    <h3
+                      class="text-lg font-bold text-slate-500 dark:text-slate-400 mb-1"
+                    >
+                      Location
+                    </h3>
+                    <p class="text-xl font-bold text-slate-800 dark:text-white">
+                      Egypt
+                    </p>
+                    <p class="text-sm text-slate-400 mt-1">Open to entry-level opportunities</p>
+                  </div>
+                </div>
+              </div>
+
+              <div
+                class="bg-linear-to-r from-primary via-secondary to-accent p-1 rounded-2xl"
+              >
+                <div class="bg-white dark:bg-slate-900 rounded-2xl p-8">
+                  <h3
+                    class="text-2xl font-bold mb-4 text-center text-slate-800 dark:text-white"
+                  >
+                    Find me online
+                  </h3>
+                  <div class="flex justify-center gap-4">
+                    <a
+                      href="https://github.com/omarmustafa62"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="w-14 h-14 bg-slate-200 dark:bg-slate-800 rounded-xl flex items-center justify-center hover:bg-primary transition-all duration-300 transform hover:scale-110 group"
+                      aria-label="GitHub"
+                    >
+                      <i
+                        class="fa-brands fa-github text-2xl text-slate-700 dark:text-white group-hover:text-white"
+                        aria-hidden="true"
+                      ></i>
+                    </a>
+                    <a
+                      href="https://www.linkedin.com/in/omarmustafaa"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="w-14 h-14 bg-slate-200 dark:bg-slate-800 rounded-xl flex items-center justify-center hover:bg-primary transition-all duration-300 transform hover:scale-110 group"
+                      aria-label="LinkedIn"
+                    >
+                      <i
+                        class="fa-brands fa-linkedin text-2xl text-slate-700 dark:text-white group-hover:text-white"
+                        aria-hidden="true"
+                      ></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="bg-slate-50 dark:bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-slate-200 dark:border-slate-700"
+            >
+              <form class="space-y-6" aria-label="Contact form">
+                <div>
+                  <label for="full-name" class="block text-lg font-medium mb-2"
+                    >Full name</label
+                  >
+                  <input
+                    type="text"
+                    id="full-name"
+                    name="full-name"
+                    autocomplete="name"
+                    required
+                    class="w-full bg-white dark:bg-slate-700/50 border border-slate-300 dark:border-slate-600 rounded-xl px-6 py-4 text-slate-800 dark:text-white placeholder-slate-500 dark:placeholder-slate-400 focus:outline-none focus:border-primary transition-colors"
+                    placeholder="Enter your full name"
+                  />
+                </div>
+                <div>
+                  <label for="email" class="block text-lg font-medium mb-2"
+                    >Email</label
+                  >
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    autocomplete="email"
+                    required
+                    class="w-full bg-white dark:bg-slate-700/50 border border-slate-300 dark:border-slate-600 rounded-xl px-6 py-4 text-slate-800 dark:text-white placeholder-slate-500 dark:placeholder-slate-400 focus:outline-none focus:border-primary transition-colors"
+                    placeholder="example@email.com"
+                  />
+                </div>
+                <div>
+                  <label for="phone" class="block text-lg font-medium mb-2"
+                    >Phone</label
+                  >
+                  <input
+                    type="tel"
+                    id="phone"
+                    name="phone"
+                    autocomplete="tel"
+                    class="w-full bg-white dark:bg-slate-700/50 border border-slate-300 dark:border-slate-600 rounded-xl px-6 py-4 text-slate-800 dark:text-white placeholder-slate-500 dark:placeholder-slate-400 focus:outline-none focus:border-primary transition-colors"
+                    placeholder="+20 10 XXXX XXXX"
+                  />
+                </div>
+                <div>
+                  <label
+                    id="project-type-label"
+                    class="block text-lg font-medium mb-2"
+                    >Inquiry type</label
+                  >
+                  <div class="custom-select-wrapper relative">
+                    <div
+                      class="custom-select w-full bg-white dark:bg-slate-700/50 border border-slate-300 dark:border-slate-600 rounded-xl px-6 py-4 text-slate-800 dark:text-white focus:border-primary transition-all cursor-pointer flex justify-between items-center hover:border-primary"
+                      data-name="project-type"
+                      role="combobox"
+                      aria-labelledby="project-type-label"
+                      aria-haspopup="listbox"
+                      aria-expanded="false"
+                      tabindex="0"
+                    >
+                      <span
+                        class="selected-text text-slate-500 dark:text-slate-400"
+                        >Choose an inquiry type</span
+                      >
+                      <i
+                        class="fa-solid fa-chevron-down transition-transform duration-300 text-slate-600 dark:text-slate-400"
+                        aria-hidden="true"
+                      ></i>
+                    </div>
+                    <div
+                      class="custom-options absolute w-full bg-white dark:bg-slate-800 border border-slate-300 dark:border-slate-600 rounded-xl mt-2 shadow-2xl z-50 hidden overflow-hidden"
+                      role="listbox"
+                      aria-labelledby="project-type-label"
+                    >
+                      <div
+                        class="custom-option px-6 py-3 hover:bg-primary/20 cursor-pointer transition-colors text-slate-700 dark:text-slate-200"
+                        data-value="Web development"
+                        role="option"
+                      >
+                        Web development
+                      </div>
+                      <div
+                        class="custom-option px-6 py-3 hover:bg-primary/20 cursor-pointer transition-colors text-slate-700 dark:text-slate-200"
+                        data-value="Job opportunity"
+                        role="option"
+                      >
+                        Job opportunity
+                      </div>
+                      <div
+                        class="custom-option px-6 py-3 hover:bg-primary/20 cursor-pointer transition-colors text-slate-700 dark:text-slate-200"
+                        data-value="Networking"
+                        role="option"
+                      >
+                        Networking
+                      </div>
+                      <div
+                        class="custom-option px-6 py-3 hover:bg-primary/20 cursor-pointer transition-colors text-slate-700 dark:text-slate-200"
+                        data-value="Other"
+                        role="option"
+                      >
+                        Other
+                      </div>
+                      <div
+                        class="custom-option px-6 py-3 hover:bg-primary/20 cursor-pointer transition-colors text-slate-700 dark:text-slate-200"
+                        data-value="Project inquiry"
+                        role="option"
+                      >
+                        Project inquiry
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div>
+                  <label
+                    id="budget-label"
+                    class="block text-lg font-medium mb-2"
+                    >How did you hear about me?</label
+                  >
+                  <div class="custom-select-wrapper relative">
+                    <div
+                      class="custom-select w-full bg-white dark:bg-slate-700/50 border border-slate-300 dark:border-slate-600 rounded-xl px-6 py-4 text-slate-800 dark:text-white focus:border-primary transition-all cursor-pointer flex justify-between items-center hover:border-primary"
+                      data-name="budget"
+                      role="combobox"
+                      aria-labelledby="budget-label"
+                      aria-haspopup="listbox"
+                      aria-expanded="false"
+                      tabindex="0"
+                    >
+                      <span
+                        class="selected-text text-slate-500 dark:text-slate-400"
+                        >Select an option</span
+                      >
+                      <i
+                        class="fa-solid fa-chevron-down transition-transform duration-300 text-slate-600 dark:text-slate-400"
+                        aria-hidden="true"
+                      ></i>
+                    </div>
+                    <div
+                      class="custom-options absolute w-full bg-white dark:bg-slate-800 border border-slate-300 dark:border-slate-600 rounded-xl mt-2 shadow-2xl z-50 hidden overflow-hidden"
+                      role="listbox"
+                      aria-labelledby="budget-label"
+                    >
+                      <div
+                        class="custom-option px-6 py-3 hover:bg-secondary/20 cursor-pointer transition-colors text-slate-700 dark:text-slate-200"
+                        data-value="GitHub"
+                        role="option"
+                      >
+                        GitHub
+                      </div>
+                      <div
+                        class="custom-option px-6 py-3 hover:bg-secondary/20 cursor-pointer transition-colors text-slate-700 dark:text-slate-200"
+                        data-value="LinkedIn"
+                        role="option"
+                      >
+                        LinkedIn
+                      </div>
+                      <div
+                        class="custom-option px-6 py-3 hover:bg-secondary/20 cursor-pointer transition-colors text-slate-700 dark:text-slate-200"
+                        data-value="Referral"
+                        role="option"
+                      >
+                        Referral
+                      </div>
+                      <div
+                        class="custom-option px-6 py-3 hover:bg-secondary/20 cursor-pointer transition-colors text-slate-700 dark:text-slate-200"
+                        data-value="Other"
+                        role="option"
+                      >
+                        Other
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div>
+                  <label
+                    for="project-details"
+                    class="block text-lg font-medium mb-2"
+                    >Message</label
+                  >
+                  <textarea
+                    id="project-details"
+                    name="project-details"
+                    rows="5"
+                    required
+                    class="w-full bg-white dark:bg-slate-700/50 border border-slate-300 dark:border-slate-600 rounded-xl px-6 py-4 text-slate-800 dark:text-white placeholder-slate-500 dark:placeholder-slate-400 focus:outline-none focus:border-primary transition-colors resize-none"
+                    placeholder="Write your message..."
+                  ></textarea>
+                </div>
+                <button
+                  type="submit"
+                  class="w-full bg-linear-to-r from-primary to-secondary py-4 rounded-xl text-lg font-bold text-white hover:shadow-2xl hover:shadow-primary/50 transition-all duration-300 transform hover:scale-105"
+                >
+                  <i
+                    class="fa-solid fa-paper-plane me-2"
+                    aria-hidden="true"
+                  ></i>
+                  Send message
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
 
       <footer
         id="footer"
@@ -225,20 +2695,43 @@
                 <div
                   class="text-2xl font-bold bg-linear-to-r from-primary to-secondary bg-clip-text text-transparent"
                 >
-                  عمر مصطفى
+                  Omar Mustafa
                 </div>
               </div>
               <p
                 class="text-slate-500 dark:text-slate-400 text-lg leading-relaxed mb-8"
               >
-                أؤمن بأن البرمجة فن. هدفي مش بس كتابة كود، بل خلق تجربة مستخدم
-                سلسة بتسيب أثر. بدمج التصميم الجمالي مع الأداء القوي عشان أقدم
-                منتج نهائي متكامل.
+                I'm a junior frontend developer focused on building clear, responsive interfaces. I enjoy learning through practical projects and collaborating with a development team.
               </p>
 
               <!-- Unique Actions -->
               <div class="space-y-6">
-                <!-- Contact / GitHub Link --><a href="https://github.com/omarmustafa62" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-4 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 px-5 py-4 rounded-xl transition-all duration-300 hover:border-primary hover:shadow-lg group w-full md:w-auto"><div class="w-12 h-12 bg-primary/10 text-primary rounded-lg flex items-center justify-center"><i class="fa-brands fa-github text-xl"></i></div><div class="text-right"><span class="block text-xs text-slate-500 dark:text-slate-400 mb-1">شاهد الكود والمشاريع</span><span class="block font-bold text-slate-800 dark:text-white text-lg">GitHub Profile</span></div><i class="fa-solid fa-arrow-up-right-from-square mr-auto text-slate-300 group-hover:text-primary"></i></a>
+                <!-- Resume Download Button -->
+                <a
+                  href="https://github.com/omarmustafa62/Omar-Mustafa-Portfolio"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="inline-flex items-center gap-4 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 px-5 py-4 rounded-xl transition-all duration-300 hover:border-primary hover:shadow-lg hover:-translate-y-1 group w-full md:w-auto"
+                >
+                  <div
+                    class="w-12 h-12 bg-primary/10 text-primary rounded-lg flex items-center justify-center group-hover:bg-primary group-hover:text-white transition-colors duration-300"
+                  >
+                    <i class="fa-solid fa-file-arrow-down text-xl"></i>
+                  </div>
+                  <div class="text-right">
+                    <span
+                      class="block text-xs text-slate-500 dark:text-slate-400 mb-1"
+                      >Explore my work</span
+                    >
+                    <span
+                      class="block font-bold text-slate-800 dark:text-white text-lg"
+                      >View my portfolio on GitHub</span
+                    >
+                  </div>
+                  <i
+                    class="fa-solid fa-arrow-left mr-auto text-slate-300 group-hover:text-primary transition-colors"
+                  ></i>
+                </a>
 
                 <!-- "Currently Building" Status -->
                 <div class="flex items-center gap-3 px-2">
@@ -251,10 +2744,10 @@
                     ></span>
                   </span>
                   <p class="text-sm text-slate-500 dark:text-slate-400">
-                    أعمل حالياً على:
+                    Currently learning:
                     <span
                       class="font-bold text-slate-700 dark:text-white border-b-2 border-emerald-500/30"
-                      >تطوير مهاراتي في React.js وبناء مشاريع Frontend</span
+                      >React.js and TypeScript fundamentals</span
                     >
                   </p>
                 </div>
@@ -262,96 +2755,96 @@
             </div>
 
             <div>
-              <h3 class="text-xl font-bold mb-6">روابط سريعة</h3>
+              <h3 class="text-xl font-bold mb-6">Quick links</h3>
               <ul class="space-y-3">
                 <li>
                   <a
                     href="#hero-section"
                     class="text-slate-500 dark:text-slate-400 hover:text-primary transition-colors text-lg"
-                    >الرئيسية</a
+                    >Home</a
                   >
                 </li>
                 <li>
                   <a
                     href="#about"
                     class="text-slate-500 dark:text-slate-400 hover:text-primary transition-colors text-lg"
-                    >عني</a
+                    >About</a
                   >
                 </li>
                 <li>
                   <a
                     href="#portfolio"
                     class="text-slate-500 dark:text-slate-400 hover:text-primary transition-colors text-lg"
-                    >الأعمال</a
+                    >Projects</a
                   >
                 </li>
                 <li>
                   <a
                     href="#experience"
                     class="text-slate-500 dark:text-slate-400 hover:text-primary transition-colors text-lg"
-                    >الخبرة</a
+                    >Education</a
                   >
                 </li>
                 <li>
                   <a
                     href="#testimonials"
                     class="text-slate-500 dark:text-slate-400 hover:text-primary transition-colors text-lg"
-                    >التوصيات</a
+                    >Highlights</a
                   >
                 </li>
                 <li>
                   <a
                     href="#contact"
                     class="text-slate-500 dark:text-slate-400 hover:text-primary transition-colors text-lg"
-                    >تواصل</a
+                    >Contact</a
                   >
                 </li>
               </ul>
             </div>
 
             <div>
-              <h3 class="text-xl font-bold mb-6">الخدمات</h3>
+              <h3 class="text-xl font-bold mb-6">Skills</h3>
               <ul class="space-y-3">
                 <li>
                   <a
-                    href="#portfolio"
+                    href="#skills-section"
                     class="text-slate-500 dark:text-slate-400 hover:text-primary transition-colors text-lg"
-                    >تطوير الويب</a
+                    >Frontend development</a
                   >
                 </li>
                 <li>
                   <a
-                    href="#portfolio"
+                    href="#skills-section"
                     class="text-slate-500 dark:text-slate-400 hover:text-primary transition-colors text-lg"
-                    >تطوير التطبيقات</a
+                    >Responsive layouts</a
                   >
                 </li>
                 <li>
                   <a
-                    href="#portfolio"
+                    href="#skills-section"
                     class="text-slate-500 dark:text-slate-400 hover:text-primary transition-colors text-lg"
-                    >تصميم UI/UX</a
+                    >JavaScript and REST APIs</a
                   >
                 </li>
                 <li>
                   <a
-                    href="#contact"
+                    href="#skills-section"
                     class="text-slate-500 dark:text-slate-400 hover:text-primary transition-colors text-lg"
-                    >الاستشارات التقنية</a
+                    >React.js (learning)</a
                   >
                 </li>
                 <li>
                   <a
-                    href="#portfolio"
+                    href="#skills-section"
                     class="text-slate-500 dark:text-slate-400 hover:text-primary transition-colors text-lg"
-                    >تحسين الأداء</a
+                    >TypeScript fundamentals</a
                   >
                 </li>
                 <li>
                   <a
-                    href="#contact"
+                    href="#skills-section"
                     class="text-slate-500 dark:text-slate-400 hover:text-primary transition-colors text-lg"
-                    >الصيانة والدعم</a
+                    >Git and GitHub</a
                   >
                 </li>
               </ul>
@@ -363,7 +2856,7 @@
               <p
                 class="text-slate-500 dark:text-slate-400 text-lg mb-4 md:mb-0"
               >
-                &copy; 2025 عمر مصطفى. جميع الحقوق محفوظة.
+                &copy; 2026 Omar Mustafa. All rights reserved.
               </p>
             </div>
           </div>
@@ -375,7 +2868,7 @@
     <button
       id="scroll-to-top"
       class="fixed left-8 bottom-8 bg-gradient-to-tr from-primary to-accent hover:from-secondary hover:to-primary text-white w-14 h-14 rounded-full shadow-lg hover:shadow-2xl hover:shadow-primary/50 flex items-center justify-center transition-all duration-300 opacity-0 invisible z-50 hover:scale-110 group"
-      aria-label="العودة للأعلى"
+      aria-label="Back to top"
       type="button"
     >
       <i
@@ -387,7 +2880,7 @@
     <button
       id="settings-toggle"
       class="fixed top-1/2 right-0 w-12 h-12 bg-white/90 dark:bg-slate-900/90 backdrop-blur-md border-y border-l border-slate-200 dark:border-slate-700 rounded-l-xl flex items-center justify-center shadow-lg hover:bg-slate-50 dark:hover:bg-slate-800 text-slate-600 dark:text-slate-300 transition-all duration-300 group z-[70]"
-      aria-label="تخصيص المظهر"
+      aria-label="Customize appearance"
       aria-expanded="false"
       aria-controls="settings-sidebar"
       type="button"
@@ -404,7 +2897,7 @@
       id="settings-sidebar"
       class="fixed top-0 right-0 h-full w-80 bg-white/95 dark:bg-slate-900/95 backdrop-blur-xl shadow-2xl transform translate-x-full transition-transform duration-300 z-[60] border-l border-slate-200 dark:border-slate-800"
       role="dialog"
-      aria-label="لوحة تخصيص المظهر"
+      aria-label="Appearance settings"
       aria-hidden="true"
     >
       <!-- Sidebar Content -->
@@ -415,12 +2908,12 @@
         >
           <h3 class="text-xl font-bold dark:text-white flex items-center gap-2">
             <i class="fa-solid fa-sliders text-primary" aria-hidden="true"></i>
-            تخصيص المظهر
+            Customize appearance
           </h3>
           <button
             id="close-settings"
             class="w-8 h-8 rounded-full bg-slate-100 dark:bg-slate-800 flex items-center justify-center text-slate-400 hover:text-primary hover:bg-slate-200 dark:hover:bg-slate-700 transition-all"
-            aria-label="إغلاق لوحة التخصيص"
+            aria-label="Close settings panel"
             type="button"
           >
             <i class="fa-solid fa-xmark" aria-hidden="true"></i>
@@ -435,25 +2928,25 @@
               class="text-sm font-bold text-slate-500 dark:text-slate-400 mb-4 uppercase tracking-wider flex items-center gap-2"
             >
               <i class="fa-solid fa-font text-xs" aria-hidden="true"></i>
-              نوع الخط
+              Font family
             </h4>
             <div
               class="space-y-3"
               role="radiogroup"
-              aria-label="اختيار نوع الخط"
+              aria-label="Choose a font family"
             >
               <button
                 class="font-option w-full p-4 rounded-xl border border-slate-200 dark:border-slate-700 hover:border-primary/50 hover:bg-slate-50 dark:hover:bg-slate-800/50 transition-all text-right group relative overflow-hidden"
                 data-font="alexandria"
                 role="radio"
-                aria-checked="false"
+                aria-checked="true"
                 type="button"
               >
                 <span
                   class="font-alexandria block text-lg font-bold text-slate-800 dark:text-slate-200 group-hover:text-primary transition-colors mb-1"
-                  >Alexandria</span
+                  >Inter</span
                 >
-                <span class="text-xs text-slate-400">Alexandria</span>
+                <span class="text-xs text-slate-400">Clean and versatile</span>
                 <div
                   class="absolute top-1/2 left-4 transform -translate-y-1/2 opacity-0 group-[.active]:opacity-100 text-primary transition-opacity"
                   aria-hidden="true"
@@ -465,14 +2958,14 @@
                 class="font-option w-full p-4 rounded-xl border border-slate-200 dark:border-slate-700 hover:border-primary/50 hover:bg-slate-50 dark:hover:bg-slate-800/50 transition-all text-right group relative overflow-hidden"
                 data-font="tajawal"
                 role="radio"
-                aria-checked="true"
+                aria-checked="false"
                 type="button"
               >
                 <span
                   class="font-tajawal block text-lg font-bold text-slate-800 dark:text-slate-200 group-hover:text-primary transition-colors mb-1"
-                  >Tajawal</span
+                  >Manrope</span
                 >
-                <span class="text-xs text-slate-400">الخط الافتراضي</span>
+                <span class="text-xs text-slate-400">The default font</span>
                 <div
                   class="absolute top-1/2 left-4 transform -translate-y-1/2 opacity-0 group-[.active]:opacity-100 text-primary transition-opacity"
                   aria-hidden="true"
@@ -490,9 +2983,9 @@
               >
                 <span
                   class="font-cairo block text-lg font-bold text-slate-800 dark:text-slate-200 group-hover:text-primary transition-colors mb-1"
-                  >Cairo</span
+                  >Montserrat</span
                 >
-                <span class="text-xs text-slate-400">Cairo</span>
+                <span class="text-xs text-slate-400">Geometric and modern</span>
                 <div
                   class="absolute top-1/2 left-4 transform -translate-y-1/2 opacity-0 group-[.active]:opacity-100 text-primary transition-opacity"
                   aria-hidden="true"
@@ -512,13 +3005,13 @@
               class="text-sm font-bold text-slate-500 dark:text-slate-400 mb-4 uppercase tracking-wider flex items-center gap-2"
             >
               <i class="fa-solid fa-palette text-xs" aria-hidden="true"></i>
-              لون الثيم
+              Accent colors
             </h4>
             <!-- Grid for colors will be populated by JS or simple HTML here. I'll use HTML for structure but might need IDs -->
             <div
               class="grid grid-cols-4 gap-3"
               id="theme-colors-grid"
-              aria-label="اختيار لون الثيم"
+              aria-label="Choose an accent color palette"
             >
               <!-- Javascript will populate this -->
             </div>
@@ -535,7 +3028,7 @@
             type="button"
           >
             <i class="fa-solid fa-rotate-right" aria-hidden="true"></i>
-            إعادة الضبط
+            Reset to defaults
           </button>
         </div>
       </div>

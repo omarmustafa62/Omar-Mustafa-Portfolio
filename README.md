@@ -1,13 +1,14 @@
-# Omar Mustafa — Frontend Developer Portfolio
+# Omar Mustafa | Junior Frontend Developer
 
-Personal portfolio website for presenting my frontend development profile, education, training, selected projects, and contact information.
+An English-language portfolio presenting my frontend development profile, education, training, skills, and selected projects.
 
-## Highlights
-- Arabic, right-to-left portfolio layout
-- Profile, education, and training sections
-- Verified technical skills and learning focus
-- Selected projects linked directly to their GitHub repositories
-- Responsive layout and appearance controls
+## Features
+- Responsive, left-to-right layout with light and dark themes
+- CV-based profile, education, training, skills, and project information
+- Scroll-aware navigation and project category filters
+- Interactive project highlights carousel
+- Customizable accent colors and fonts
+- Scroll-to-top control
 
 ## Built With
 - HTML5
@@ -22,11 +23,8 @@ Personal portfolio website for presenting my frontend development profile, educa
 
 ## Project Structure
 - `Omar-Mustafa-Portfolio/index.html` — page markup
-- `Omar-Mustafa-Portfolio/assets/css/style.css` — compiled Tailwind CSS stylesheet
+- `Omar-Mustafa-Portfolio/assets/css/style.css` — compiled stylesheet
 - `Omar-Mustafa-Portfolio/assets/js/index.js` — frontend interactions
 - `Omar-Mustafa-Portfolio/assets/imgs/` — image assets
 
-## Notes
-This is a static frontend portfolio. No backend service is required to view the website. Project source links point to the corresponding public GitHub repositories.
-
-Created by **Omar Mustafa**.
+This is a static frontend portfolio; no backend service is required to view the website.
