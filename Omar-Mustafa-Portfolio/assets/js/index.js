@@ -1,3 +1,37 @@
+// Mobile navigation
+let mobileMenuButton = document.getElementById("mobile-menu-button");
+let navigationMenu = document.getElementById("nav-links");
+
+function closeMobileMenu() {
+    navigationMenu.classList.remove("active");
+    mobileMenuButton.setAttribute("aria-expanded", "false");
+    mobileMenuButton.setAttribute("aria-label", "فتح قائمة التنقل");
+    mobileMenuButton.innerHTML = '<i class="fa-solid fa-bars text-xl" aria-hidden="true"></i>';
+}
+
+mobileMenuButton.addEventListener("click", function () {
+    let isOpen = navigationMenu.classList.toggle("active");
+    mobileMenuButton.setAttribute("aria-expanded", String(isOpen));
+    mobileMenuButton.setAttribute("aria-label", isOpen ? "إغلاق قائمة التنقل" : "فتح قائمة التنقل");
+    mobileMenuButton.innerHTML = isOpen
+        ? '<i class="fa-solid fa-xmark text-xl" aria-hidden="true"></i>'
+        : '<i class="fa-solid fa-bars text-xl" aria-hidden="true"></i>';
+});
+
+navigationMenu.querySelectorAll("a").forEach(function (link) {
+    link.addEventListener("click", closeMobileMenu);
+});
+
+document.addEventListener("keydown", function (event) {
+    if (event.key === "Escape") closeMobileMenu();
+});
+
+window.addEventListener("resize", function () {
+    if (window.innerWidth > 1024) closeMobileMenu();
+});
+
+//////////////////////////////////////////
+
 //  active links
 let heroSection = document.getElementById("hero-section")
 let about = document.getElementById("about")
