@@ -49,13 +49,12 @@ if (savedTheme === "dark") {
 } else {
     html.classList.remove("dark");
 }
+themeBtn.setAttribute("aria-pressed", String(html.classList.contains("dark")));
 themeBtn.addEventListener("click", function () {
     html.classList.toggle("dark");
-    if (html.classList.contains("dark")) {
-        localStorage.setItem("theme", "dark");
-    } else {
-        localStorage.setItem("theme", "light");
-    }
+    let isDark = html.classList.contains("dark");
+    themeBtn.setAttribute("aria-pressed", String(isDark));
+    localStorage.setItem("theme", isDark ? "dark" : "light");
 });
 //////////////////////////////////////////
 
