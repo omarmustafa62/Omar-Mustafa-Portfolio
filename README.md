@@ -1,13 +1,13 @@
 # Omar Mustafa — Frontend Developer Portfolio
 
-A personal portfolio website for presenting my frontend development profile, selected work, technical skills, and contact information.
+Personal portfolio website for presenting my frontend development profile, education, training, selected projects, and contact information.
 
 ## Highlights
 - Arabic, right-to-left portfolio layout
-- About and skills sections
-- Project showcase with category filters
-- Theme and appearance controls
-- Responsive layout and interactive UI elements
+- Profile, education, and training sections
+- Verified technical skills and learning focus
+- Selected projects linked directly to their GitHub repositories
+- Responsive layout and appearance controls
 
 ## Built With
 - HTML5
@@ -17,7 +17,8 @@ A personal portfolio website for presenting my frontend development profile, sel
 - Google Fonts
 
 ## Run Locally
-Clone the repository, then open `Omar-Mustafa-Portfolio/index.html` in a browser.
+1. Clone this repository.
+2. Open `Omar-Mustafa-Portfolio/index.html` in a browser.
 
 ## Project Structure
 - `Omar-Mustafa-Portfolio/index.html` — page markup
@@ -26,6 +27,6 @@ Clone the repository, then open `Omar-Mustafa-Portfolio/index.html` in a browser
 - `Omar-Mustafa-Portfolio/assets/imgs/` — image assets
 
 ## Notes
-The portfolio content is being refined to reflect verified skills, education, training, and real project work. Project source repositories are linked from the GitHub account.
+This is a static frontend portfolio. No backend service is required to view the website. Project source links point to the corresponding public GitHub repositories.
 
 Created by **Omar Mustafa**.
