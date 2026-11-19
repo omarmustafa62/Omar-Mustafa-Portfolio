@@ -4049,69 +4049,8 @@ textarea:focus-visible,
 .project-art-cosmos .art-caption, .project-art-game .art-caption { color: #ecf0f1; }
 
 
-/* Clear, low-noise portfolio styling */
-:root {
-    --color-primary: #2c3e50;
-    --color-secondary: #3e6573;
-    --color-accent: #55766e;
-    --color-slate-950: #2c3e50;
-    --color-slate-900: #2c3e50;
-    --color-slate-800: #34495e;
-    --color-slate-700: #34495e;
-    --color-slate-600: #52606d;
-    --color-slate-500: #52606d;
-    --color-slate-400: #7f8c8d;
-    --color-slate-300: #bdc3c7;
-    --color-slate-200: #d5dadd;
-    --color-slate-100: #e4e8eb;
-    --color-slate-50: #ecf0f1;
-    --color-white: #ecf0f1;
-    --color-black: #2c3e50;
-}
-:root:not(.dark) .text-slate-300,
-:root:not(.dark) .text-slate-400,
-:root:not(.dark) .text-slate-500,
-:root:not(.dark) .text-slate-600 { color: #52606d !important; }
-:root.dark .text-slate-300,
-:root.dark .text-slate-400,
-:root.dark .text-slate-500,
-:root.dark .text-slate-600 { color: #bdc3c7 !important; }
-:root:not(.dark) .bg-white { background-color: #ecf0f1 !important; }
 
-/* Use solid color blocks instead of decorative gradients. */
-[class*="bg-linear-to-"],
-[class*="bg-gradient-to-"] { background-image: none !important; }
-[class*="from-primary"],
-[class*="from-secondary"],
-[class*="from-accent"] {
-    background-color: var(--color-primary);
-}
-.dark [class*="from-primary"],
-.dark [class*="from-secondary"],
-.dark [class*="from-accent"] {
-    background-color: #34495e;
-}
-.bg-clip-text.text-transparent {
-    background-image: none !important;
-    background-clip: border-box !important;
-    color: var(--color-primary) !important;
-    -webkit-text-fill-color: var(--color-primary) !important;
-}
-.dark .bg-clip-text.text-transparent {
-    color: #ecf0f1 !important;
-    -webkit-text-fill-color: #ecf0f1 !important;
-}
-.animate-gradient { animation: none !important; }
-
-.dark .bg-primary,
-.dark .bg-secondary,
-.dark .bg-accent { background-color: #34495e !important; }
-.dark [class*="hover:bg-primary"]:hover,
-.dark [class*="hover:bg-secondary"]:hover,
-.dark [class*="hover:bg-accent"]:hover { background-color: #3e6573 !important; }
-
-
-/* Portfolio refresh: neutral light canvas, one blue family, crisp project previews */
+/* Portfolio colors: a quiet light canvas, strong text, and a single blue accent. */
 :root {
     --color-primary: #315b7d;
     --color-secondary: #477a99;
@@ -4155,19 +4094,9 @@ textarea:focus-visible,
 :root.dark .text-slate-600 { color: #cbd2d9 !important; }
 :root:not(.dark) .bg-white { background-color: #ffffff !important; }
 
-/* Solid, readable accents replace the old blended gradients. */
-[class*="bg-linear-to-"],
-[class*="bg-gradient-to-"] { background-image: none !important; }
-[class*="from-primary"],
-[class*="from-secondary"],
-[class*="from-accent"] { background-color: var(--color-primary); }
-.dark [class*="from-primary"],
-.dark [class*="from-secondary"],
-.dark [class*="from-accent"],
-.dark .bg-primary,
-.dark .bg-secondary,
-.dark .bg-accent { background-color: #334e68 !important; }
+/* Keep gradient-text headings readable without a color block behind them. */
 .bg-clip-text.text-transparent {
+    background-color: transparent !important;
     background-image: none !important;
     background-clip: border-box !important;
     color: var(--color-primary) !important;
@@ -4177,25 +4106,35 @@ textarea:focus-visible,
     color: #f0f4f8 !important;
     -webkit-text-fill-color: #f0f4f8 !important;
 }
-.animate-gradient { animation: none !important; }
 
-/* Give every project preview its own restrained, recognizable color. */
-.project-art::before { display: none !important; }
-.project-art-contact { background: #dce9f4; color: #243b53; }
-.project-art-recipe { background: #f3e6d9; color: #5e493a; }
-.project-art-cosmos { background: #1e3247; color: #f0f4f8; }
-.project-art-finance { background: #e7eddc; color: #43533e; }
-.project-art-portfolio { background: #e2e8f0; color: #37495a; }
-.project-art-nutri { background: #e2ecdc; color: #405d46; }
-.project-art-homes { background: #eee6d9; color: #62513e; }
-.project-art-game { background: #e8e6f2; color: #42425c; }
-.dark .project-art-contact { background: #2d4a62; color: #f0f4f8; }
-.dark .project-art-recipe { background: #624835; color: #f7f9fb; }
-.dark .project-art-cosmos { background: #1e3247; color: #f0f4f8; }
-.dark .project-art-finance { background: #43533e; color: #f0f4f8; }
-.dark .project-art-portfolio { background: #37495a; color: #f0f4f8; }
-.dark .project-art-nutri { background: #405d46; color: #f0f4f8; }
-.dark .project-art-homes { background: #62513e; color: #f0f4f8; }
-.dark .project-art-game { background: #42425c; color: #f0f4f8; }
-.art-window { border-color: #d9e2ec; background: #ffffff; }
-.dark .art-caption { color: #f0f4f8 !important; }
+/* Project previews use full-width, full-height crops. Logo assets stay intact. */
+.project-photo-box {
+    height: 18rem;
+    overflow: hidden;
+    display: block;
+    background: #edf2f7;
+}
+.project-photo {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: transform .35s ease;
+}
+.portfolio-item:hover .project-photo { transform: scale(1.035); }
+.project-photo-contain {
+    object-fit: contain;
+    padding: 1.5rem;
+}
+.project-photo-finance { background: #eaf0e9; }
+.project-photo-portfolio { background: #f4f6f8; }
+.project-photo-nutri { background: #edf2e8; }
+.dark .project-photo-box { background: #243b53; }
+.dark .project-photo-finance { background: #263c33; }
+.dark .project-photo-portfolio { background: #243b53; }
+.dark .project-photo-nutri { background: #283d32; }
+@media (prefers-reduced-motion: reduce) {
+    .project-photo { transition: none; }
+    .portfolio-item:hover .project-photo { transform: none; }
+}
