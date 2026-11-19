@@ -464,3 +464,45 @@ scrollToTop.addEventListener("click", function () {
         behavior: "smooth",
     });
 });
+
+// Accessible contact form submission
+const contactForm = document.getElementById("contact-form");
+const contactFormStatus = document.getElementById("contact-form-status");
+
+if (contactForm && contactFormStatus) {
+    contactForm.addEventListener("submit", async function (event) {
+        event.preventDefault();
+        if (!contactForm.reportValidity()) return;
+
+        const submitButton = contactForm.querySelector('[type="submit"]');
+        const originalButtonText = submitButton.innerHTML;
+        submitButton.disabled = true;
+        submitButton.setAttribute("aria-busy", "true");
+        contactFormStatus.textContent = "Sending your message…";
+
+        try {
+            const formData = new FormData(contactForm);
+            const response = await fetch(contactForm.action, {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                    "Accept": "application/json"
+                },
+                body: JSON.stringify(Object.fromEntries(formData.entries()))
+            });
+            const result = await response.json();
+            if (!response.ok || result.success === "false" || result.success === false) {
+                throw new Error(result.message || "Message could not be sent.");
+            }
+
+            contactFormStatus.textContent = "Thanks — your message has been sent. I’ll get back to you soon.";
+            contactForm.reset();
+        } catch (error) {
+            contactFormStatus.textContent = "Sorry, the message could not be sent right now. Please email me directly at omarmustafa62dx@gmail.com.";
+        } finally {
+            submitButton.disabled = false;
+            submitButton.removeAttribute("aria-busy");
+            submitButton.innerHTML = originalButtonText;
+        }
+    });
+}

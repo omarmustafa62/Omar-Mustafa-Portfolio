@@ -3818,3 +3818,28 @@ textarea:focus-visible,
 .portfolio-item {
     transition: all 0.3s ease;
 }
+
+
+/* Calm visual treatment for project previews and native form controls */
+:root { --color-primary: #25645d; --color-secondary: #617f78; --color-accent: #9b7652; }
+.project-art {
+    height: 18rem;
+    display: grid;
+    align-content: center;
+    justify-items: center;
+    gap: .75rem;
+    color: #f8fafc;
+    font: 700 1.5rem/1.2 ui-sans-serif, system-ui, sans-serif;
+    letter-spacing: -.03em;
+}
+.project-art i { font-size: 3.25rem; }
+.project-art-nutri { background: radial-gradient(circle at 75% 20%, #b8d8bd 0, transparent 35%), linear-gradient(135deg, #315c4a, #78977f); }
+.project-art-homes { background: radial-gradient(circle at 20% 15%, #e7d8be 0, transparent 33%), linear-gradient(135deg, #5a5c56, #9d927e); }
+.project-art-game { background: radial-gradient(circle at 80% 20%, #a3b8c4 0, transparent 35%), linear-gradient(135deg, #283b4b, #657b89); }
+.contact-select { appearance: auto; cursor: pointer; }
+.contact-select:focus-visible { outline: 3px solid rgb(15 118 110 / 35%); outline-offset: 2px; }
+#contact-form [type="submit"]:disabled { opacity: .7; cursor: wait; transform: none; }
+#contact-form-status { min-height: 1.5rem; }
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; transition-duration: .01ms !important; }
+}
