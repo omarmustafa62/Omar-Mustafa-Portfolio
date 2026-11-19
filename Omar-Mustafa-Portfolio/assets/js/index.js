@@ -468,8 +468,10 @@ scrollToTop.addEventListener("click", function () {
 // Accessible contact form submission
 const contactForm = document.getElementById("contact-form");
 const contactFormStatus = document.getElementById("contact-form-status");
+const contactSuccess = document.getElementById("contact-success");
+const sendAnotherButton = document.getElementById("contact-send-another");
 
-if (contactForm && contactFormStatus) {
+if (contactForm && contactFormStatus && contactSuccess) {
     contactForm.addEventListener("submit", async function (event) {
         event.preventDefault();
         if (!contactForm.reportValidity()) return;
@@ -482,27 +484,42 @@ if (contactForm && contactFormStatus) {
 
         try {
             const formData = new FormData(contactForm);
+            const submission = Object.fromEntries(formData.entries());
+            submission._replyto = submission.email;
+
             const response = await fetch(contactForm.action, {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
                     "Accept": "application/json"
                 },
-                body: JSON.stringify(Object.fromEntries(formData.entries()))
+                body: JSON.stringify(submission)
             });
             const result = await response.json();
+
             if (!response.ok || result.success === "false" || result.success === false) {
                 throw new Error(result.message || "Message could not be sent.");
             }
 
-            contactFormStatus.textContent = "Thanks — your message has been sent. I’ll get back to you soon.";
             contactForm.reset();
+            contactForm.hidden = true;
+            contactSuccess.classList.remove("hidden");
+            contactFormStatus.textContent = "";
         } catch (error) {
-            contactFormStatus.textContent = "Sorry, the message could not be sent right now. Please email me directly at omarmustafa62dx@gmail.com.";
+            contactFormStatus.textContent = "Sorry, your message could not be sent right now. Please email me directly at omarmustafa62dx@gmail.com.";
         } finally {
             submitButton.disabled = false;
             submitButton.removeAttribute("aria-busy");
             submitButton.innerHTML = originalButtonText;
         }
     });
+
+    if (sendAnotherButton) {
+        sendAnotherButton.addEventListener("click", function () {
+            contactSuccess.classList.add("hidden");
+            contactForm.hidden = false;
+            contactFormStatus.textContent = "";
+            contactForm.querySelector("input[name='name']").focus();
+        });
+    }
 }
