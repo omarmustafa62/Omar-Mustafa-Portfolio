@@ -201,9 +201,17 @@ function updateTestimonialsCarousel() {
     if (!testimonialsCarousel || !testimonialCards.length) return;
 
     const lastIndex = Math.max(0, testimonialCards.length - visibleTestimonialCount);
-    testimonialIndex = Math.min(testimonialIndex, lastIndex);
+    testimonialIndex = Math.min(Math.max(0, testimonialIndex), lastIndex);
+    [nextTestimonialButton, previousTestimonialButton].forEach(function (button, index) {
+        if (!button) return;
+        const unavailable = lastIndex === 0 || (index === 0 ? testimonialIndex === lastIndex : testimonialIndex === 0);
+        button.disabled = unavailable;
+        button.classList.toggle("opacity-40", unavailable);
+        button.classList.toggle("cursor-not-allowed", unavailable);
+        button.classList.toggle("cursor-pointer", !unavailable);
+    });
     testimonialsCarousel.style.transform =
-        `translateX(${testimonialIndex * (100 / visibleTestimonialCount)}%)`;
+        `translateX(-${testimonialIndex * (100 / visibleTestimonialCount)}%)`;
 
     testimonialIndicators.forEach(function (indicator, index) {
         const isActive = index === testimonialIndex;
@@ -226,7 +234,7 @@ if (testimonialsCarousel && testimonialCards.length) {
     if (nextTestimonialButton) {
         nextTestimonialButton.addEventListener("click", function () {
             const lastIndex = Math.max(0, testimonialCards.length - visibleTestimonialCount);
-            testimonialIndex = testimonialIndex >= lastIndex ? 0 : testimonialIndex + 1;
+            testimonialIndex = Math.min(testimonialIndex + 1, lastIndex);
             updateTestimonialsCarousel();
         });
     }
@@ -234,11 +242,31 @@ if (testimonialsCarousel && testimonialCards.length) {
     if (previousTestimonialButton) {
         previousTestimonialButton.addEventListener("click", function () {
             const lastIndex = Math.max(0, testimonialCards.length - visibleTestimonialCount);
-            testimonialIndex = testimonialIndex <= 0 ? lastIndex : testimonialIndex - 1;
+            testimonialIndex = Math.max(testimonialIndex - 1, 0);
             updateTestimonialsCarousel();
         });
     }
 
+    let carouselPointerStart = null;
+    testimonialsCarousel.addEventListener("pointerdown", function (event) {
+        if (event.pointerType === "mouse") return;
+        carouselPointerStart = { x: event.clientX, y: event.clientY };
+    });
+    testimonialsCarousel.addEventListener("pointerup", function (event) {
+        if (!carouselPointerStart) return;
+        const deltaX = event.clientX - carouselPointerStart.x;
+        const deltaY = event.clientY - carouselPointerStart.y;
+        carouselPointerStart = null;
+        if (Math.abs(deltaX) < 45 || Math.abs(deltaX) <= Math.abs(deltaY)) return;
+        const lastIndex = Math.max(0, testimonialCards.length - visibleTestimonialCount);
+        testimonialIndex = deltaX < 0
+            ? Math.min(testimonialIndex + 1, lastIndex)
+            : Math.max(testimonialIndex - 1, 0);
+        updateTestimonialsCarousel();
+    });
+    testimonialsCarousel.addEventListener("pointercancel", function () {
+        carouselPointerStart = null;
+    });
     window.addEventListener("resize", refreshTestimonialsCarousel);
     refreshTestimonialsCarousel();
 }

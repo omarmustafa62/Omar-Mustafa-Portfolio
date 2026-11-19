@@ -4138,3 +4138,47 @@ textarea:focus-visible,
     .project-photo { transition: none; }
     .portfolio-item:hover .project-photo { transform: none; }
 }
+/* Dark theme contrast: distinct page, surface, border, and text colors. */
+html.dark {
+    --color-primary: #7cc8f0;
+    --color-secondary: #a7dcf4;
+    --color-accent: #83d6b1;
+    --color-slate-950: #0b1220;
+    --color-slate-900: #111c2e;
+    --color-slate-800: #1b2a3d;
+    --color-slate-700: #334155;
+    --color-slate-600: #475569;
+    --color-slate-500: #64748b;
+    --color-slate-400: #94a3b8;
+    --color-slate-300: #cbd5e1;
+    --color-slate-200: #dbe4ee;
+    --color-slate-100: #e7eef5;
+    --color-slate-50: #f3f6fa;
+    --color-white: #f3f6fa;
+    --color-black: #0b1220;
+    color-scheme: dark;
+}
+html.dark body {
+    background: #0b1220 !important;
+    color: #e2e8f0;
+}
+html.dark #testimonials { background-color: #111c2e !important; }
+#testimonials-carousel { touch-action: pan-y; }
+html.dark #testimonials-carousel .testimonial-card > div {
+    background-color: #1b2a3d !important;
+    border-color: #334155 !important;
+}
+html.dark .timeline-card-left,
+html.dark .timeline-card-right,
+html.dark .experience-section .mt-20 > div {
+    background-color: #162336 !important;
+    border-color: #334155 !important;
+}
+html.dark .text-slate-600 { color: #cbd5e1 !important; }
+html.dark .text-slate-500,
+html.dark .text-slate-400 { color: #a9b8cb !important; }
+html.dark .text-slate-300 { color: #dbe6f2 !important; }
+html.dark .bg-slate-700 { background-color: #334155 !important; }
+html.dark .border-slate-700,
+html.dark .border-slate-600 { border-color: #475569 !important; }
+html.dark .nav-links { background-color: #111c2e !important; }
