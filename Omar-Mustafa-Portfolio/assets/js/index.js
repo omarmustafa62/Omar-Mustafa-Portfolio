@@ -321,45 +321,32 @@ applyFont(availableFonts.includes(savedFont) ? savedFont : "alexandria");
 const themeColorsGrid = document.getElementById("theme-colors-grid");
 const themes = [
     {
-        name: "Deep Slate",
-        primary: "#2c3e50",
-        secondary: "#3e6573",
-        accent: "#55766e"
+        name: "Slate & Blue",
+        primary: "#315b7d", secondary: "#477a99", accent: "#627f75",
+        darkPrimary: "#9fbcd1", darkSecondary: "#bad0df", darkAccent: "#b8c9c0"
     },
     {
-        name: "Harbor",
-        primary: "#34495e",
-        secondary: "#496b78",
-        accent: "#5f8077"
+        name: "Deep Navy",
+        primary: "#2c485d", secondary: "#3e6c85", accent: "#6b8173",
+        darkPrimary: "#a2bdcf", darkSecondary: "#bdd1de", darkAccent: "#bdcbc1"
     },
     {
-        name: "Steel",
-        primary: "#34495e",
-        secondary: "#536d7a",
-        accent: "#667f78"
+        name: "Steel Blue",
+        primary: "#405c77", secondary: "#5b778b", accent: "#70867a",
+        darkPrimary: "#b1c2d4", darkSecondary: "#c2d0dc", darkAccent: "#c1cec6"
     },
     {
-        name: "Blue Gray",
-        primary: "#2c3e50",
-        secondary: "#4a6473",
-        accent: "#617d75"
+        name: "Ocean Slate",
+        primary: "#34495e", secondary: "#406d82", accent: "#647d70",
+        darkPrimary: "#afc2d1", darkSecondary: "#bdd1d8", darkAccent: "#bacbc1"
     }
 ];
 
 function applyTheme(theme) {
     const isDarkMode = document.documentElement.classList.contains("dark");
-    document.documentElement.style.setProperty(
-        "--color-primary",
-        isDarkMode ? "#bdc3c7" : theme.primary
-    );
-    document.documentElement.style.setProperty(
-        "--color-secondary",
-        isDarkMode ? "#ecf0f1" : theme.secondary
-    );
-    document.documentElement.style.setProperty(
-        "--color-accent",
-        isDarkMode ? "#bdc3c7" : theme.accent
-    );
+    document.documentElement.style.setProperty("--color-primary", isDarkMode ? theme.darkPrimary : theme.primary);
+    document.documentElement.style.setProperty("--color-secondary", isDarkMode ? theme.darkSecondary : theme.secondary);
+    document.documentElement.style.setProperty("--color-accent", isDarkMode ? theme.darkAccent : theme.accent);
     const themeButtons = themeColorsGrid.querySelectorAll("button");
     themeButtons.forEach(function (btn) {
         const isActive =
