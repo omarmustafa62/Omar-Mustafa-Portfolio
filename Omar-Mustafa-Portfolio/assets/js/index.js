@@ -320,40 +320,28 @@ applyFont(availableFonts.includes(savedFont) ? savedFont : "alexandria");
 const themeColorsGrid = document.getElementById("theme-colors-grid");
 const themes = [
     {
-        name: "Pine & Sage",
-        primary: "#3f6b5a",
-        secondary: "#55786d",
-        accent: "#8a6747"
+        name: "Deep Slate",
+        primary: "#2c3e50",
+        secondary: "#34495e",
+        accent: "#7f8c8d"
     },
     {
-        name: "Slate & Cedar",
-        primary: "#4b6274",
-        secondary: "#667e8e",
-        accent: "#8f6d55"
+        name: "Harbor",
+        primary: "#34495e",
+        secondary: "#2c3e50",
+        accent: "#7f8c8d"
     },
     {
-        name: "Olive & Linen",
-        primary: "#5d6946",
-        secondary: "#72805c",
-        accent: "#8a6846"
+        name: "Steel",
+        primary: "#2c3e50",
+        secondary: "#7f8c8d",
+        accent: "#34495e"
     },
     {
-        name: "Blue Gray & Stone",
-        primary: "#4e6780",
-        secondary: "#667f96",
-        accent: "#8e6c59"
-    },
-    {
-        name: "Terracotta & Moss",
-        primary: "#875d4d",
-        secondary: "#6d7e72",
-        accent: "#a07658"
-    },
-    {
-        name: "Plum & Taupe",
-        primary: "#6d596a",
-        secondary: "#847183",
-        accent: "#8d6d4d"
+        name: "Mist",
+        primary: "#34495e",
+        secondary: "#7f8c8d",
+        accent: "#2c3e50"
     }
 ];
 
