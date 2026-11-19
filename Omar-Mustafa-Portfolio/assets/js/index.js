@@ -320,40 +320,40 @@ applyFont(availableFonts.includes(savedFont) ? savedFont : "alexandria");
 const themeColorsGrid = document.getElementById("theme-colors-grid");
 const themes = [
     {
-    name: "Coastal Teal & Citrus",
-    primary: "#0f766e",
-    secondary: "#f97316",
-    accent: "#eab308"
+        name: "Pine & Sage",
+        primary: "#3f6b5a",
+        secondary: "#55786d",
+        accent: "#8a6747"
     },
     {
-    name: "Evergreen & Clay",
-    primary: "#166534",
-    secondary: "#c2410c",
-    accent: "#d97706"
+        name: "Slate & Cedar",
+        primary: "#4b6274",
+        secondary: "#667e8e",
+        accent: "#8f6d55"
     },
     {
-    name: "Atlantic & Coral",
-    primary: "#0369a1",
-    secondary: "#f97316",
-    accent: "#2dd4bf"
+        name: "Olive & Linen",
+        primary: "#5d6946",
+        secondary: "#72805c",
+        accent: "#8a6846"
     },
     {
-    name: "Midnight & Lime",
-    primary: "#164e63",
-    secondary: "#a16207",
-    accent: "#84cc16"
+        name: "Blue Gray & Stone",
+        primary: "#4e6780",
+        secondary: "#667f96",
+        accent: "#8e6c59"
     },
     {
-    name: "Terracotta & Sea Glass",
-    primary: "#b45309",
-    secondary: "#0f766e",
-    accent: "#fb7185"
+        name: "Terracotta & Moss",
+        primary: "#875d4d",
+        secondary: "#6d7e72",
+        accent: "#a07658"
     },
     {
-    name: "Graphite & Sun",
-    primary: "#334155",
-    secondary: "#ca8a04",
-    accent: "#f97316"
+        name: "Plum & Taupe",
+        primary: "#6d596a",
+        secondary: "#847183",
+        accent: "#8d6d4d"
     }
 ];
 
