@@ -4047,3 +4047,65 @@ textarea:focus-visible,
 .project-art-game > i { color: #ecf0f1; }
 .art-caption { color: #34495e; }
 .project-art-cosmos .art-caption, .project-art-game .art-caption { color: #ecf0f1; }
+
+
+/* Clear, low-noise portfolio styling */
+:root {
+    --color-primary: #2c3e50;
+    --color-secondary: #3e6573;
+    --color-accent: #55766e;
+    --color-slate-950: #2c3e50;
+    --color-slate-900: #2c3e50;
+    --color-slate-800: #34495e;
+    --color-slate-700: #34495e;
+    --color-slate-600: #52606d;
+    --color-slate-500: #52606d;
+    --color-slate-400: #7f8c8d;
+    --color-slate-300: #bdc3c7;
+    --color-slate-200: #d5dadd;
+    --color-slate-100: #e4e8eb;
+    --color-slate-50: #ecf0f1;
+    --color-white: #ecf0f1;
+    --color-black: #2c3e50;
+}
+:root:not(.dark) .text-slate-300,
+:root:not(.dark) .text-slate-400,
+:root:not(.dark) .text-slate-500,
+:root:not(.dark) .text-slate-600 { color: #52606d !important; }
+:root.dark .text-slate-300,
+:root.dark .text-slate-400,
+:root.dark .text-slate-500,
+:root.dark .text-slate-600 { color: #bdc3c7 !important; }
+:root:not(.dark) .bg-white { background-color: #ecf0f1 !important; }
+
+/* Use solid color blocks instead of decorative gradients. */
+[class*="bg-linear-to-"],
+[class*="bg-gradient-to-"] { background-image: none !important; }
+[class*="from-primary"],
+[class*="from-secondary"],
+[class*="from-accent"] {
+    background-color: var(--color-primary);
+}
+.dark [class*="from-primary"],
+.dark [class*="from-secondary"],
+.dark [class*="from-accent"] {
+    background-color: #34495e;
+}
+.bg-clip-text.text-transparent {
+    background-image: none !important;
+    background-clip: border-box !important;
+    color: var(--color-primary) !important;
+    -webkit-text-fill-color: var(--color-primary) !important;
+}
+.dark .bg-clip-text.text-transparent {
+    color: #ecf0f1 !important;
+    -webkit-text-fill-color: #ecf0f1 !important;
+}
+.animate-gradient { animation: none !important; }
+
+.dark .bg-primary,
+.dark .bg-secondary,
+.dark .bg-accent { background-color: #34495e !important; }
+.dark [class*="hover:bg-primary"]:hover,
+.dark [class*="hover:bg-secondary"]:hover,
+.dark [class*="hover:bg-accent"]:hover { background-color: #3e6573 !important; }

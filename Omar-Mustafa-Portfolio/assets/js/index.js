@@ -86,6 +86,7 @@ themeBtn.addEventListener("click", function () {
     const isDark = html.classList.contains("dark");
     localStorage.setItem("theme", isDark ? "dark" : "light");
     updateThemeButton();
+    if (typeof savedThemeColors !== "undefined") applyTheme(savedThemeColors);
 });
 //////////////////////////////////////////
 
@@ -322,41 +323,42 @@ const themes = [
     {
         name: "Deep Slate",
         primary: "#2c3e50",
-        secondary: "#34495e",
-        accent: "#7f8c8d"
+        secondary: "#3e6573",
+        accent: "#55766e"
     },
     {
         name: "Harbor",
         primary: "#34495e",
-        secondary: "#2c3e50",
-        accent: "#7f8c8d"
+        secondary: "#496b78",
+        accent: "#5f8077"
     },
     {
         name: "Steel",
-        primary: "#2c3e50",
-        secondary: "#7f8c8d",
-        accent: "#34495e"
+        primary: "#34495e",
+        secondary: "#536d7a",
+        accent: "#667f78"
     },
     {
-        name: "Mist",
-        primary: "#34495e",
-        secondary: "#7f8c8d",
-        accent: "#2c3e50"
+        name: "Blue Gray",
+        primary: "#2c3e50",
+        secondary: "#4a6473",
+        accent: "#617d75"
     }
 ];
 
 function applyTheme(theme) {
+    const isDarkMode = document.documentElement.classList.contains("dark");
     document.documentElement.style.setProperty(
         "--color-primary",
-        theme.primary
+        isDarkMode ? "#bdc3c7" : theme.primary
     );
     document.documentElement.style.setProperty(
         "--color-secondary",
-        theme.secondary
+        isDarkMode ? "#ecf0f1" : theme.secondary
     );
     document.documentElement.style.setProperty(
         "--color-accent",
-        theme.accent
+        isDarkMode ? "#bdc3c7" : theme.accent
     );
     const themeButtons = themeColorsGrid.querySelectorAll("button");
     themeButtons.forEach(function (btn) {
@@ -389,8 +391,7 @@ themes.forEach(function (theme) {
     const button = document.createElement("button");
     button.className =
         "w-12 h-12 rounded-full cursor-pointer transition-transform hover:scale-110 border-2 border-slate-200 dark:border-slate-700";
-    button.style.background =
-        `linear-gradient(135deg, ${theme.primary}, ${theme.secondary})`;
+    button.style.background = theme.primary;
     button.dataset.primary = theme.primary;
     button.dataset.secondary = theme.secondary;
     button.dataset.accent = theme.accent;
